@@ -30,7 +30,7 @@ Optioneel:
 - Een werknemer kan foto's aan het logboek toevoegen. De mate van urgentie kan hierbij bepaald worden.
 
 ### Prerequisites ###
-##### External sources:
+##### External components: #####
 Online API lijst voor to-do list: https://ide50-duncanvrosch.cs50.io:8080/todolist
 Online API lijst voor logboek: https://ide50-duncanvrosch.cs50.io:8080/logboek
 
