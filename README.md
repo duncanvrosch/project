@@ -31,6 +31,7 @@ Optioneel:
 
 ### Prerequisites ###
 ##### External components: #####
-Online API lijst voor to-do list: https://ide50-duncanvrosch.cs50.io:8080/todolist
-Online API lijst voor logboek: https://ide50-duncanvrosch.cs50.io:8080/logboek
+- Online API lijst voor to-do list: https://ide50-duncanvrosch.cs50.io:8080/todolist
+
+- Online API lijst voor logboek: https://ide50-duncanvrosch.cs50.io:8080/logboek
 
