@@ -11,7 +11,7 @@ Kortom, als bijvoorbeeld supermarktmedewerker wil je alle taken voor een werkdag
 ### Oplossing ###
 Als oplossing voor dit probleem wil ik graag een app ontwikkelen die de mogelijkheid geeft voor een werkgever om transparant en duidelijk to-do listen samen te stellen, deze goed of af te keuren en een logboek te onderhouden als bepaalde zaken die gemeld staan door werknemers inmiddels zijn opgelost waarbij de werknemer dit alles op de app te zien krijgt.
 
-<img src="https://github.com/duncanvrosch/AppProposal/blob/master/AppProposal.jpg" width="100%" height="100%"/>
+<img src="https://github.com/duncanvrosch/project/blob/master/doc/AppProposal.jpg" width="100%" height="100%"/>
 
 ### Features ###
 MVP:
