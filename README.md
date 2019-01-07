@@ -35,3 +35,9 @@ Optioneel:
 
 - Online API lijst voor logboek: https://ide50-duncanvrosch.cs50.io:8080/logboek
 
+##### Similar apps: #####
+Er bestaan enkele soortgelijke apps waarbij er lijsten worden bijgehouden van ingevoerde items: denk aan notitie-apps. Vaak zijn deze overzichtelijk geordend in lijsten die zijn ingedeeld op tijd. De functionaliteit qua toevoegen en verwijderen van items van een to-do list of logboek, kan ik ook gebruiken in mijn eigen app waar dit noodzakelijk is. Echter, het is moeilijker aangezien huidige apps nauwelijks tot niet de mogelijkheid geven om een prioriteit of label toe te voegen aan een notitie of item. Dit zal ik onder andere zelf moeten implementeren.
+
+##### Hardest parts: #####
+Tijdens het maken van de app kan ik problemen krijgen met het maken van twee verschillende soorten interfaces. Die van de werkgever die meer bevoegdheden heeft, en die van de werknemer, die er juist minder heeft. Mocht ik hiermee te veel vertraging oplopen, kies ik ervoor om me te beperken tot een uitgebreide versie die voor de werknemer / werkgever hetzelfde is.
+
