@@ -7,7 +7,7 @@ Design Document
 <img src="https://github.com/duncanvrosch/project/blob/master/doc/DesignDocument.jpg" width="100%" height="100%"/>
 
 ### Diagram of functions ###
-<img src="https://github.com/duncanvrosch/project/blob/master/doc/DesignDocument2.png" width="100%" height="100%"/>
+<img src="https://github.com/duncanvrosch/project/blob/master/doc/DesignDocument2.png" width="60%" height="60%"/>
 
 
 ### Data Sources ###
