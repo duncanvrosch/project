@@ -4,7 +4,7 @@ Design Document
 ## Duncan Vrösch (11211490) ##
 
 ### Sketch ###
-<img src="https://github.com/duncanvrosch/project/blob/master/doc/AppProposal.jpg" width="100%" height="100%"/>
+<img src="https://github.com/duncanvrosch/project/blob/master/doc/DesignDocument.jpg" width="100%" height="100%"/>
 
 ### Diagram of functions ###
 
