@@ -1,4 +1,4 @@
-Desgin document
+Design Document
 ===================
 
 ## Duncan Vrösch (11211490) ##
