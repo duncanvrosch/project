@@ -31,6 +31,9 @@ Optioneel:
 
 ### Prerequisites ###
 ##### External components: #####
+In de app zal op de homepage ook een actueel weerbericht te zien zijn zodat een werknemer kan beslissen en kan zien of het handig is een bepaalde werktaak buiten uit te voeren. Dit weerbericht wordt geleverd door de API van OpenWeatherMap via de link: https://openweathermap.org/forecast5
+
+##### External components: #####
 - Online API lijst voor to-do list: https://ide50-duncanvrosch.cs50.io:8080/todolist
 
 - Online API lijst voor logboek: https://ide50-duncanvrosch.cs50.io:8080/logboek
