@@ -18,4 +18,10 @@ public class LogWGActivity extends AppCompatActivity {
         Intent intent = new Intent(LogWGActivity.this, LogNewItemWGActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(LogWGActivity.this, MenuWGActivity.class);
+        startActivity(intent);
+    }
 }

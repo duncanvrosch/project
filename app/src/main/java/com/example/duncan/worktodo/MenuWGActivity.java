@@ -30,4 +30,10 @@ public class MenuWGActivity extends AppCompatActivity {
         Intent intent = new Intent(MenuWGActivity.this, LogInActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(MenuWGActivity.this, MenuWGActivity.class);
+        startActivity(intent);
+    }
 }

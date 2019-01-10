@@ -18,4 +18,10 @@ public class ToDoListWGActivity extends AppCompatActivity {
         Intent intent = new Intent(ToDoListWGActivity.this, ToDoNewItemWGActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(ToDoListWGActivity.this, MenuWGActivity.class);
+        startActivity(intent);
+    }
 }

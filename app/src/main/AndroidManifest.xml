@@ -22,7 +22,13 @@
         <activity android:name=".LogNewItemWGActivity" />
         <activity android:name=".LogDetailWGActivity" />
         <activity android:name=".ToDoNewItemWGActivity" />
-        <activity android:name=".ToDoListDetailWGActivity"></activity>
+        <activity android:name=".ToDoListDetailWGActivity" />
+        <activity android:name=".MenuWNActivity" />
+        <activity android:name=".LogWNActivity" />
+        <activity android:name=".LogNewItemWNActivity" />
+        <activity android:name=".LogDetailWNActivity" />
+        <activity android:name=".ToDoListWNActivity" />
+        <activity android:name=".ToDoListDetailWNActivity"></activity>
     </application>
 
 </manifest>
