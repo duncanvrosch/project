@@ -36,7 +36,7 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     private void validate(String userName, String userPassword){
-        if((userName == "Werkgever") && (userPassword == "Werkgever")){
+        if((userName.equals("Werkgever")) && (userPassword.equals("Werkgever"))){
             Intent intent = new Intent(LogInActivity.this, MenuWGActivity.class);
             startActivity(intent);
         }
