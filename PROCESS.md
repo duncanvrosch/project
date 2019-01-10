@@ -8,3 +8,11 @@ Vandaag ben ik begonnen met het opstarten van het project in Android Studio en h
 
 Nog niet alle activiteiten zijn aangemaakt. Dit gebeurt morgen waarna alle activiteiten aan elkaar worden gelinkt zodat het prototype van de app gereed is.
 
+
+### Donderdag 10-01-2019 ###
+Vandaag heb ik alle activiteiten aangemaakt en de linkjes gelegd tussen deze activiteiten. De navigatie klopt dus nu en daarmee is mijn prototype afgerond. Dit komt erop neer dat er twee verschillende platformen zijn voor aan de ene kant de werkgever, en aan de andere kant de werknemer. Deze keuze heb ik gemaakt zodat het makkelijk wordt om verschillende bevoegdheden toe te kennen aan de twee verschillende platformen. 
+
+De platformen zijn daarnaast gescheiden door de inlogpagina. Er kan ingelogd worden door de werknemer met gebruikersnaam en wachtwoord 'Werknemer', en er kan ingelogd worden door de werkgever met gebruikersnaam en wachtwoord 'Werkgever'. 
+
+De volgende stap is het laten functioneren van de lijsten en de databases zodat er items in de to-do listen en het logboek geplaatst kunnen worden.
+
