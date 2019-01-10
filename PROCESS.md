@@ -18,5 +18,7 @@ Ook heb ik vandaag een huisstijl ontworpen voor mijn app met keuze voor kleuren 
 
 <img src="https://github.com/duncanvrosch/project/blob/master/doc/Logo%20WorkToDo.jpg" width="20%" height="20%"/>
 
+<img src="https://github.com/duncanvrosch/project/blob/master/doc/Screenshot_20190110-160333.png" width="20%" height="20%"/>
+
 De volgende stap is het laten functioneren van de lijsten en de databases zodat er items in de to-do listen en het logboek geplaatst kunnen worden.
 
