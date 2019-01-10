@@ -21,7 +21,8 @@
         <activity android:name=".ToDoListWGActivity" />
         <activity android:name=".LogNewItemWGActivity" />
         <activity android:name=".LogDetailWGActivity" />
-        <activity android:name=".ToDoNewItemWGActivity"></activity>
+        <activity android:name=".ToDoNewItemWGActivity" />
+        <activity android:name=".ToDoListDetailWGActivity"></activity>
     </application>
 
 </manifest>
