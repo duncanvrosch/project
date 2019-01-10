@@ -19,7 +19,9 @@
         <activity android:name=".MenuWGActivity" />
         <activity android:name=".LogWGActivity" />
         <activity android:name=".ToDoListWGActivity" />
-        <activity android:name=".LogNewItemWGActivity"></activity>
+        <activity android:name=".LogNewItemWGActivity" />
+        <activity android:name=".LogDetailWGActivity" />
+        <activity android:name=".ToDoNewItemWGActivity"></activity>
     </application>
 
 </manifest>
