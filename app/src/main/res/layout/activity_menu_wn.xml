@@ -47,16 +47,54 @@
         android:text="My WorkToDo-List" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:gravity="center"
         android:paddingLeft="15dp"
-        android:paddingTop="0dp"
+        android:paddingTop="10dp"
         android:paddingRight="15dp"
         android:paddingBottom="20dp"
-        android:text="Hier komt het weerbericht."
+        android:text="Date"
+        android:textSize="17sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textViewCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="20dp"
+        android:text="City"
+        android:textSize="17sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textViewTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="20dp"
+        android:text="Temp"
+        android:textSize="17sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="20dp"
+        android:text="Description"
         android:textSize="17sp"
         android:textStyle="italic" />
 
