@@ -5,69 +5,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F2F2F2"
     tools:context=".MenuWNActivity">
 
-    <TextView
-        android:id="@+id/textView3"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:gravity="center"
-        android:paddingTop="10dp"
-        android:text="Welcome to WorkToDo!"
-        android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:gravity="center"
-        android:paddingLeft="15dp"
-        android:paddingTop="0dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="20dp"
-        android:text="We wish you a great day at work today!"
-        android:textSize="17sp"
-        android:textStyle="italic" />
-
-    <Button
-        android:id="@+id/btnLog"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClickLOG"
-        android:text="LOG" />
-
-    <Button
-        android:id="@+id/btnToDoList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClickTODOLIST"
-        android:paddingBottom="0dp"
-        android:text="My WorkToDo-List" />
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:srcCompat="@drawable/logoworktodonobackgroundpng" />
 
     <TextView
         android:id="@+id/textViewDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:text="Date"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnLog"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="#e50e0e"
+        android:onClick="onClickLOG"
+        android:text="LOG"
+        android:textColor="@color/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/btnToDoList"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#e50e0e"
+        android:onClick="onClickTODOLIST"
+        android:text="My WorkToDo-List"
+        android:textColor="@color/ic_launcher_background" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="300dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0"
+        android:background="?android:attr/listDivider"
+        tools:background="?attr/actionModeSplitBackground" />
+
+    <TextView
+        android:id="@+id/Weerbericht"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center"
         android:paddingLeft="15dp"
         android:paddingTop="10dp"
         android:paddingRight="15dp"
-        android:paddingBottom="20dp"
-        android:text="Date"
+        android:text="Weather for today:"
         android:textSize="17sp"
-        android:textStyle="italic" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewCity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:gravity="center"
         android:paddingLeft="15dp"
         android:paddingTop="10dp"
         android:paddingRight="15dp"
-        android:paddingBottom="20dp"
+        android:paddingBottom="0dp"
         android:text="City"
         android:textSize="17sp"
         android:textStyle="italic" />
@@ -77,10 +96,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:gravity="center"
         android:paddingLeft="15dp"
         android:paddingTop="10dp"
         android:paddingRight="15dp"
-        android:paddingBottom="20dp"
+        android:paddingBottom="0dp"
         android:text="Temp"
         android:textSize="17sp"
         android:textStyle="italic" />
@@ -90,18 +110,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:gravity="center"
         android:paddingLeft="15dp"
         android:paddingTop="10dp"
         android:paddingRight="15dp"
-        android:paddingBottom="20dp"
+        android:paddingBottom="0dp"
         android:text="Description"
         android:textSize="17sp"
         android:textStyle="italic" />
 
     <Button
         android:id="@+id/btnLogOut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
         android:onClick="onClickLOGOUT"
         android:text="Log Out" />
 

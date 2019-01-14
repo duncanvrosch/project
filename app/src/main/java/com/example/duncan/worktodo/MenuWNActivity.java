@@ -52,21 +52,15 @@ public class MenuWNActivity extends AppCompatActivity {
                     String description = object.getString("description");
                     String city = response.getString("name");
 
-                    t1_temp.setText(temp);
+                    t1_temp.setText(temp + "°C");
                     t2_city.setText(city);
                     t3_description.setText(description);
 
                     Calendar calendar = Calendar.getInstance();
-                    SimpleDateFormat sdf = new SimpleDateFormat("EEEE=MM-dd");
+                    SimpleDateFormat sdf = new SimpleDateFormat("EEEE dd - MM -" + " 2019");
                     String formatted_date = sdf.format(calendar.getTime());
 
                     t4_date.setText(formatted_date);
-
-                    //double temp_int = Double.parseDouble(temp);
-                    //double centi = (temp_int - 32) / 1.8000;
-                    //centi = Math.round(centi);
-                    //int i = (int) centi;
-                    //t1_temp.setText(String.valueOf(i));
 
                 } catch (JSONException e) {
                     e.printStackTrace();
