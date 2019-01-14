@@ -22,3 +22,14 @@ Ook heb ik vandaag een huisstijl ontworpen voor mijn app met keuze voor kleuren 
 
 De volgende stap is het laten functioneren van de lijsten en de databases zodat er items in de to-do listen en het logboek geplaatst kunnen worden.
 
+
+### Vrijdag 11-01-2019 ###
+Vandaag heb ik niet de volgende stap gevolgd die ik gisteren had gepland om vandaag te doen: het laten functioneren van de lijsten en de databases zodat er items in de to-do listen en het logboek geplaatst kunnen worden. In plaats daarvan heb ik vandaag de API vanuit OpenWeatherMap werkend gemaakt waardoor het voor de werknemer duidelijk is wat voor een weer het is. Echter, het is erg minimaal en de graden celsius kloppen nog niet helemaal. Dus ondanks dat de verbinding met de API werkt, is de data die wordt ingeladen nog niet bruikbaar voor de gebruiker. Hier zal ik maandag aan verder werken zodat ik hier na maandag geen omkijken meer naar heb. 
+
+Vanaf dinsdag wil ik aan de slag met de databases voor de to-do list en het logboek.
+
+
+### Maandag 14-01-2019 ###
+Vandaag vond de eerste bijeenkomst plaats van de mentorgroep. Hierin heb ik aangegeven wat mijn idee is voor de app, hoe ver ik ben en hoe ik denk enkele zaken te gaan implementeren. Onder andere kwam in de bespreking het implementeren van de database voor de to-do list en het logboek voorbij. Aangezien ik nog niet wist welke database ik hiervoor ging gebruiken, heb ik hulp gevraagd. Aangeraden is om de database te implementeren door middel van de rester database die ik al eerder heb gebruikt in een andere app. 
+
+Verder...
