@@ -4,6 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.logging.Logger;
 
 public class LogNewItemWNActivity extends AppCompatActivity {
 
@@ -14,6 +19,18 @@ public class LogNewItemWNActivity extends AppCompatActivity {
     }
 
     public void onClickADDITEMTOLOGGER(View v) {
+
+        EditText titleEdit = findViewById(R.id.etTitle);
+        String title = titleEdit.getText().toString();
+        EditText descriptionEdit = findViewById(R.id.etDescription);
+        String description = descriptionEdit.getText().toString();
+        EditText priorityEdit = findViewById(R.id.etPriority);
+        String priority = priorityEdit.getText().toString();
+
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+
+        LoggerPost post = new LoggerPost(LogNewItemWNActivity.this);
+        post.postLogger(LogNewItemWNActivity.this, title, description, priority, timestamp);
 
         Intent intent = new Intent(LogNewItemWNActivity.this, LogWNActivity.class);
         startActivity(intent);

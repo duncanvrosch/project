@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".LogDetailWGActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/entryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:text="TextView"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/entryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/entryPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="TextView"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/entryDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:paddingStart="0dp"
+        android:paddingTop="20dp"
+        android:text="TextView"
+        android:textSize="20dp" />
+</LinearLayout>
