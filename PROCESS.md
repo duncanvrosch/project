@@ -32,4 +32,8 @@ Vanaf dinsdag wil ik aan de slag met de databases voor de to-do list en het logb
 ### Maandag 14-01-2019 ###
 Vandaag vond de eerste bijeenkomst plaats van de mentorgroep. Hierin heb ik aangegeven wat mijn idee is voor de app, hoe ver ik ben en hoe ik denk enkele zaken te gaan implementeren. Onder andere kwam in de bespreking het implementeren van de database voor de to-do list en het logboek voorbij. Aangezien ik nog niet wist welke database ik hiervoor ging gebruiken, heb ik hulp gevraagd. Aangeraden is om de database te implementeren door middel van de rester database die ik al eerder heb gebruikt in een andere app. 
 
-Verder...
+Het is me nog niet gelukt om zoals gepland het weerbericht af te maken. Het werkt, maar graag wil ik er nog een bijbehorend visueel icoontje bij maken. Hiermee ga ik direct morgenvroeg aan de slag.
+
+
+### Dinsdag 15-01-2019 ###
+
