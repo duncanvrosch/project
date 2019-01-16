@@ -36,4 +36,10 @@ Het is me nog niet gelukt om zoals gepland het weerbericht af te maken. Het werk
 
 
 ### Dinsdag 15-01-2019 ###
+Vandaag ben ik begonnen met het implementeren van de database voor het gebruik van het logboek en de to-do list. Hiervoor heb ik gebruik gemaakt van de Rester database en ben ik teruggevallen op de instructies die ook golden voor het implementeren van de Trivia app. De database is werkend voor het logboek waardoor het toevoegen van items aan het logboek nu mogelijk is geworden. Daarentegen kan nog niets verwijderd worden uit de database. Dit zal morgen geïmplementeerd worden waardoor het gebruik van het logboek voor zowel de werknemer als de werkgever gereed is.
+
+Zoals eerder wel gepland, ben ik vandaag niet toegekomen aan het afmaken van het weerbericht. Hier wil ik nog graag een bijbehorend visueel icoontje bij maken. Echter, dit is optioneel en heeft geen prioriteit. Ik wil eerst de database voor zowel het logboek als de to-do list af hebben.
+
+
+### Woensdag 16-01-2019 ###
 
