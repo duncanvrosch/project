@@ -46,4 +46,23 @@
         android:paddingTop="20dp"
         android:text="TextView"
         android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/entryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:paddingStart="0dp"
+        android:paddingTop="20dp"
+        android:text="TextView"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnAddItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickDELETEITEMFROMLOGGER"
+        android:text="Delete item from logger" />
+
 </LinearLayout>

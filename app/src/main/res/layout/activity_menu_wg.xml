@@ -14,10 +14,23 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:layout_weight="1"
         android:visibility="visible"
         app:srcCompat="@drawable/logoworktodonobackgroundpng" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:text="Date"
+        android:textSize="17sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnLog"
@@ -63,20 +76,6 @@
         android:text="Weather for today:"
         android:textSize="17sp"
         android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:gravity="center"
-        android:paddingLeft="15dp"
-        android:paddingTop="10dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="0dp"
-        android:text="Date"
-        android:textSize="17sp"
-        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textViewCity"

@@ -29,7 +29,7 @@ public class LogNewItemWNActivity extends AppCompatActivity {
         EditText priorityEdit = findViewById(R.id.etPriority);
         String priority = priorityEdit.getText().toString();
 
-        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+        String timestamp = new SimpleDateFormat("dd-MM-yyyy_HH:mm").format(Calendar.getInstance().getTime());
 
         LoggerPost post = new LoggerPost(LogNewItemWNActivity.this);
         post.postLogger(LogNewItemWNActivity.this, title, name, description, priority, timestamp);
