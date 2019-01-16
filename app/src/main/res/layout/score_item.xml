@@ -27,4 +27,30 @@
         android:paddingStart="20dp"
         android:text="TextView" />
 
+    <FrameLayout
+        android:layout_width="60dp"
+        android:layout_height="20dp">
+
+        <ImageView
+            android:id="@+id/redflag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/redflag" />
+
+        <ImageView
+            android:id="@+id/orangeflag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/orangeflag" />
+
+        <ImageView
+            android:id="@+id/greenflag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/greenflag" />
+    </FrameLayout>
+
 </LinearLayout>

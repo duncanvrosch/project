@@ -1,12 +1,15 @@
 package com.example.duncan.worktodo;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,6 +31,9 @@ public class LoggerAdapter extends ArrayAdapter<Score> {
 
         Score score = getItem(position);
 
+        ImageView redflag = convertView.findViewById(R.id.redflag);
+        ImageView orangeflag = convertView.findViewById(R.id.orangeflag);
+        ImageView greenflag = convertView.findViewById(R.id.greenflag);
         TextView titleText = convertView.findViewById(R.id.titleText);
         TextView priorityText = convertView.findViewById(R.id.priorityText);
         TextView timestampText = convertView.findViewById(R.id.timestampText);
@@ -35,6 +41,18 @@ public class LoggerAdapter extends ArrayAdapter<Score> {
         titleText.setText(score.getTitle());
         priorityText.setText(score.getPriority());
         timestampText.setText(score.getTimestamp());
+
+        if (priorityText.getText().toString().equals("high")){
+            redflag.setVisibility(View.VISIBLE);
+        }
+
+        else if (priorityText.getText().toString().equals("medium")){
+            orangeflag.setVisibility(View.VISIBLE);
+        }
+
+        if (priorityText.getText().toString().equals("low")){
+            greenflag.setVisibility(View.VISIBLE);
+        }
 
         return convertView;
     }
