@@ -14,6 +14,7 @@ import java.util.Map;
 
 public class LoggerPost implements Response.Listener<String>, Response.ErrorListener{
     String title;
+    String name;
     String description;
     String priority;
     String timestamp;
@@ -29,6 +30,7 @@ public class LoggerPost implements Response.Listener<String>, Response.ErrorList
         protected Map<String, String> getParams() {
             Map<String, String> params = new HashMap<>();
             params.put("title", title);
+            params.put("name", name);
             params.put("description", description);
             params.put("priority", priority);
             params.put("timestamp", timestamp);
@@ -45,9 +47,10 @@ public class LoggerPost implements Response.Listener<String>, Response.ErrorList
         this.context = context;
     }
 
-    public void postLogger(Context aContext, String logger_title, String logger_description, String logger_priority, String logger_timestamp){
+    public void postLogger(Context aContext, String logger_title, String logger_name, String logger_description, String logger_priority, String logger_timestamp){
         this.context = aContext;
         title = logger_title;
+        name = logger_name;
         description = logger_description;
         priority = logger_priority;
         timestamp = logger_timestamp;

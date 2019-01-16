@@ -38,7 +38,8 @@ public class LoggerHelper implements Response.Listener<JSONArray>, Response.Erro
                 String description = object.getString("description");
                 String priority = object.getString("priority");
                 String timestamp = object.getString("timestamp");
-                Score score = new Score(title, description, priority, timestamp);
+                String name = object.getString("name");
+                Score score = new Score(title, name, description, priority, timestamp);
                 highscoresList.add(score);
             }
             activity.gotScore(highscoresList);

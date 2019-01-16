@@ -22,6 +22,8 @@ public class LogNewItemWNActivity extends AppCompatActivity {
 
         EditText titleEdit = findViewById(R.id.etTitle);
         String title = titleEdit.getText().toString();
+        EditText nameEdit = findViewById(R.id.etName);
+        String name = nameEdit.getText().toString();
         EditText descriptionEdit = findViewById(R.id.etDescription);
         String description = descriptionEdit.getText().toString();
         EditText priorityEdit = findViewById(R.id.etPriority);
@@ -30,7 +32,7 @@ public class LogNewItemWNActivity extends AppCompatActivity {
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 
         LoggerPost post = new LoggerPost(LogNewItemWNActivity.this);
-        post.postLogger(LogNewItemWNActivity.this, title, description, priority, timestamp);
+        post.postLogger(LogNewItemWNActivity.this, title, name, description, priority, timestamp);
 
         Intent intent = new Intent(LogNewItemWNActivity.this, LogWNActivity.class);
         startActivity(intent);

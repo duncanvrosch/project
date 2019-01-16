@@ -5,10 +5,11 @@ import java.sql.Timestamp;
 
 public class Score implements Serializable {
 
-    String title, description, priority, timestamp;
+    String title, name, description, priority, timestamp;
 
-    public Score(String title, String description, String priority, String timestamp) {
+    public Score(String title, String name, String description, String priority, String timestamp) {
         this.title = title;
+        this.name = name;
         this.description = description;
         this.priority = priority;
         this.timestamp = timestamp;
@@ -18,13 +19,15 @@ public class Score implements Serializable {
         return title;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String getDescription() {
         return description;
     }
 
-    public String getPriority() {
-        return priority;
-    }
+    public String getPriority() { return priority; }
 
     public String getTimestamp() {
         return timestamp;
