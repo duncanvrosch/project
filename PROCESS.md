@@ -42,4 +42,9 @@ Zoals eerder wel gepland, ben ik vandaag niet toegekomen aan het afmaken van het
 
 
 ### Woensdag 16-01-2019 ###
+Vandaag heb ik het logboek ook voor de werkgever geïmplementeerd. In het overzicht staat nu ook de prioriteit visueel getoond door middel van een rood vlaggetje, oranje vlaggetje of groen vlaggetje afhankelijk van de mate van prioriteit. Daarbij is vandaag de DetailActivity geïmplementeerd voor het logboek waardoor elk item uitgebreid kan worden gezien. 
+
+Enkele problemen die ik vandaag ben tegengekomen houden verband met dezelfde database. Het implementeren van de delete funcite lijkt moeilijker dan gedacht. Hiervoor moet ik hulp vragen. Daarbij leek de Rester database ondanks de update geen zaken blijvend op te slaan. Gelukkig is dit opgelost na het herinstalleren van de Rester database in de CS50 IDE. 
+
+Morgen zal ik de to-do list implementeren zodat de alpha versie van de app morgen werkend is.
 
