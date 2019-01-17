@@ -12,21 +12,6 @@
         android:text="TextView"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/priorityText"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:text="TextView"
-        android:textStyle="italic" />
-
-    <TextView
-        android:id="@+id/timestampText"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:text="TextView" />
-
     <FrameLayout
         android:layout_width="60dp"
         android:layout_height="20dp">
@@ -52,5 +37,20 @@
             android:visibility="invisible"
             app:srcCompat="@drawable/greenflag" />
     </FrameLayout>
+
+    <TextView
+        android:id="@+id/priorityText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="TextView"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/timestampText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="TextView" />
 
 </LinearLayout>

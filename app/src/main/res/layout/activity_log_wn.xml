@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp">
 
-    <TextView
-        android:id="@+id/textView"
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        app:srcCompat="@drawable/logoworktodonobackgroundpng" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingTop="0dp"
+        android:paddingRight="15dp"
         android:paddingBottom="10dp"
-        android:text="Logger:"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:text="See all events and items in the logger below!"
+        android:textSize="17sp"
+        android:textStyle="italic" />
+
+    <ListView
+        android:id="@+id/scores"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="10dp">
+
+    </ListView>
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1"
         android:onClick="onClickNEWLOGITEM"
         android:text="Add new item to logger" />
-
-    <ListView
-        android:id="@+id/scores"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="60dp">
-
-    </ListView>
 
 </LinearLayout>

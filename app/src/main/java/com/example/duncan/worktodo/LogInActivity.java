@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LogInActivity extends AppCompatActivity {
 
@@ -39,17 +40,21 @@ public class LogInActivity extends AppCompatActivity {
         if((userName.equals("Werkgever")) && (userPassword.equals("Werkgever"))){
             Intent intent = new Intent(LogInActivity.this, MenuWGActivity.class);
             startActivity(intent);
+            return;
         }
 
-        if((userName.equals("Werknemer")) && (userPassword.equals("Werknemer"))) {
+        else if((userName.equals("Werknemer")) && (userPassword.equals("Werknemer"))) {
             Intent intent = new Intent(LogInActivity.this, MenuWNActivity.class);
             startActivity(intent);
+            return;
         }
 
         else{
             counter--;
 
             Info.setText("Remaining attempts: " + String.valueOf(counter));
+
+            Toast.makeText(getApplicationContext(), "Wrong username or password! Please try again.", Toast.LENGTH_LONG).show();
 
             if(counter == 0){
                 Login.setEnabled(false);
