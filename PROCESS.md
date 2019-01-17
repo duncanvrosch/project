@@ -49,7 +49,7 @@ Enkele problemen die ik vandaag ben tegengekomen houden verband met dezelfde dat
 Morgen zal ik de to-do list implementeren zodat de alpha versie van de app morgen werkend is.
 
 
-### Woensdag 16-01-2019 ###
+### Donderdag 17-01-2019 ###
 Zoals gepland heb ik vandaag de to-do list geïmplementeerd. De werkgever kan nu taken aanmaken en zien, de werknemer kan ze enkel en alleen zien. De volgende stap is om ervoor te zorgen dat de werknemer taken kan afvinken die gedaan zijn door middel van het aanpassen van de status van een item. Het veranderen van de status van een item zal gedaan worden via een PUT-request. 
 
 Zodra dit wordt gedaan, wordt het desbetreffende item als gedaan gemarkeerd in de to-do list en wordt deze toegevoegd aan een aparte lijst die alleen de werkgever kan zien. De werkgever kan daardoor alle taken die gedaan zijn in een overzicht zien en deze per item ook verwijderen uit zowel dat overzicht als de to-do list.
