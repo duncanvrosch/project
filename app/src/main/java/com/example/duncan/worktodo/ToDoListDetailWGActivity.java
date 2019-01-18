@@ -81,8 +81,11 @@ public class ToDoListDetailWGActivity extends AppCompatActivity {
 
                     } catch (JSONException e) {
                         e.printStackTrace();
+                        Toast.makeText(getApplicationContext(), "TOT HIER", Toast.LENGTH_LONG).show();
                     }
                 }
+
+                removalId = 1;
 
                 RequestQueue deleteQueue = Volley.newRequestQueue(getApplicationContext());
 

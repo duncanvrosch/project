@@ -49,6 +49,12 @@ public class LogInActivity extends AppCompatActivity {
             return;
         }
 
+        else if((userName.equals("WG")) && (userPassword.equals("WG"))){
+            Intent intent = new Intent(LogInActivity.this, MenuWGActivity.class);
+            startActivity(intent);
+            return;
+        }
+
         else{
             counter--;
 
