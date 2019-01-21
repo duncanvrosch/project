@@ -56,3 +56,11 @@ Zodra dit wordt gedaan, wordt het desbetreffende item als gedaan gemarkeerd in d
 
 Zodra dit geïmplementeerd is, is het gebruik van de app gereed. Mocht dit voortijdig gereed zijn, dan kunnen er optionele items worden geïmplementeerd voor de app.
 
+
+### Vrijdag 18-01-2019 ###
+Ik was ziek, maar heb een begin gemaakt aan de delete functie. Deze werkt als ik een random id nummer invul, maar het zoeken van de id lukt helaas nog niet.
+
+
+### Maandag 21-01-2019 ###
+Vandaag heb ik mijn delete functie afgemaakt en fuctioneel gemaakt. Hierdoor kunnen zowel de werkgever als de werknemer items uit de logger verwijderen. Daarbij kan de werkgever items uit de to-do list verwijderen. Dit betekent dat de basale en simpele functie van de app vandaag compleet gemaakt is. Morgen zal ik een lijst maken waardoor de werkgever kan zien welke taken zijn afgemaakt in de to-do list.
+
