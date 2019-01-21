@@ -21,7 +21,7 @@ import org.json.JSONObject;
 
 public class ToDoListDetailWGActivity extends AppCompatActivity {
 
-    Score score;
+    Score selectedItem;
     int removalId;
 
     @Override
@@ -31,7 +31,7 @@ public class ToDoListDetailWGActivity extends AppCompatActivity {
 
         // grab item
         Intent intent = getIntent();
-        Score selectedItem = (Score) intent.getSerializableExtra("selected_item");
+        selectedItem = (Score) intent.getSerializableExtra("selected_item");
 
         // grab info
         String title = selectedItem.getTitle();
@@ -55,37 +55,31 @@ public class ToDoListDetailWGActivity extends AppCompatActivity {
 
     public void onClickDONETODOITEM(View v) {
 
-        Intent intent = getIntent();
-        final Score selectedItem = (Score) intent.getSerializableExtra("selected_item");
-
         String url = "https://ide50-duncanvrosch.legacy.cs50.io:8080/todolist";
-
         RequestQueue queue = Volley.newRequestQueue(this);
-
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
 
             @Override
             public void onResponse(JSONArray response) {
 
                 String title = selectedItem.getTitle();
+
                 for (int i = 0; i < response.length(); i++) {
 
                     try {
-                        JSONObject test = response.getJSONObject(i);
-                        String checkId = test.getString("theId");
+                        JSONObject item = response.getJSONObject(i);
+                        String checkId = item.getString("title");
 
                         if (title.equals(checkId)) {
-                            removalId = test.getInt("id");
+                            removalId = item.getInt("id");
                             break;
                         }
 
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        Toast.makeText(getApplicationContext(), "TOT HIER", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Doesn't work!", Toast.LENGTH_LONG).show();
                     }
                 }
-
-                removalId = 1;
 
                 RequestQueue deleteQueue = Volley.newRequestQueue(getApplicationContext());
 
@@ -115,7 +109,9 @@ public class ToDoListDetailWGActivity extends AppCompatActivity {
         });
         queue.add(jsonArrayRequest);
 
-        Intent intentt = new Intent(ToDoListDetailWGActivity.this, ToDoListWGActivity.class);
-        startActivity(intentt);
+        Toast.makeText(getApplicationContext(), "Deleted selected to-do item!", Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent(ToDoListDetailWGActivity.this, ToDoListWGActivity.class);
+        startActivity(intent);
     }
 }
