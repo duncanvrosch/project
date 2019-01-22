@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 
@@ -32,6 +33,11 @@ public class ToDoListWNActivity extends AppCompatActivity implements LoggerHelpe
         ListView highscores = findViewById(R.id.scores);
         ToDoAdapter adapter = new ToDoAdapter(this, highscoresList);
         highscores.setAdapter(adapter);
+
+        if (adapter.getCount() == 0) {
+            TextView empty = findViewById(R.id.Empty);
+            empty.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override

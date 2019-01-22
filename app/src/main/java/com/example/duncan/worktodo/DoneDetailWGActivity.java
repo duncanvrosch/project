@@ -21,7 +21,7 @@ import org.json.JSONObject;
 
 import java.util.concurrent.TimeUnit;
 
-public class LogDetailWGActivity extends AppCompatActivity {
+public class DoneDetailWGActivity extends AppCompatActivity {
 
     Score selectedItem;
     int removalId;
@@ -29,7 +29,7 @@ public class LogDetailWGActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_detail_wg);
+        setContentView(R.layout.activity_done_detail_wg);
 
         // grab item
         Intent intent = getIntent();
@@ -55,9 +55,9 @@ public class LogDetailWGActivity extends AppCompatActivity {
         itemPriority.setText(priority);
     }
 
-    public void onClickDELETEITEMFROMLOGGER(View v) {
+    public void onClickDELETEITEMFROMDONELIST(View v) {
 
-        String url = "https://ide50-duncanvrosch.legacy.cs50.io:8080/logger";
+        String url = "https://ide50-duncanvrosch.legacy.cs50.io:8080/donelist";
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
 
@@ -85,7 +85,7 @@ public class LogDetailWGActivity extends AppCompatActivity {
 
                 RequestQueue deleteQueue = Volley.newRequestQueue(getApplicationContext());
 
-                String deleteUrl = String.format("https://ide50-duncanvrosch.legacy.cs50.io:8080/logger/%d", removalId);
+                String deleteUrl = String.format("https://ide50-duncanvrosch.legacy.cs50.io:8080/donelist/%d", removalId);
 
                 StringRequest dr = new StringRequest(Request.Method.DELETE, deleteUrl,
                         new Response.Listener<String>() {
@@ -111,7 +111,7 @@ public class LogDetailWGActivity extends AppCompatActivity {
         });
         queue.add(jsonArrayRequest);
 
-        Toast.makeText(getApplicationContext(), "Deleted selected log item!", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Deleted selected to-do item!", Toast.LENGTH_LONG).show();
 
         try {
             TimeUnit.SECONDS.sleep(1);
@@ -119,7 +119,13 @@ public class LogDetailWGActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        Intent intent = new Intent(LogDetailWGActivity.this, LogWGActivity.class);
+        Intent intent = new Intent(DoneDetailWGActivity.this, DoneWGActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickBACKTODONELIST(View v) {
+
+        Intent intent = new Intent(DoneDetailWGActivity.this, DoneWGActivity.class);
         startActivity(intent);
     }
 }

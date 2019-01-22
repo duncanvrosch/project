@@ -48,9 +48,20 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
         android:background="#e50e0e"
         android:onClick="onClickTODOLIST"
         android:text="My WorkToDo-List"
+        android:textColor="@color/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/btnDoneList"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#e50e0e"
+        android:onClick="onClickTODONELIST"
+        android:text="Done List"
         android:textColor="@color/ic_launcher_background" />
 
     <View
@@ -114,7 +125,6 @@
         android:paddingLeft="15dp"
         android:paddingTop="10dp"
         android:paddingRight="15dp"
-        android:paddingBottom="0dp"
         android:text="Description"
         android:textSize="17sp"
         android:textStyle="italic" />
@@ -124,7 +134,7 @@
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:layout_weight="1"
         android:gravity="center_vertical|center_horizontal"
         android:onClick="onClickLOGOUT"

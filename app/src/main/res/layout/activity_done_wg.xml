@@ -25,29 +25,14 @@
         android:paddingTop="0dp"
         android:paddingRight="15dp"
         android:paddingBottom="10dp"
-        android:text="See and the items on the to-do list for your team!"
+        android:text="See here the finished to-do items of your team!"
         android:textSize="15sp"
         android:textStyle="italic" />
-
-    <TextView
-        android:id="@+id/Empty"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:gravity="center"
-        android:paddingLeft="15dp"
-        android:paddingTop="0dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="10dp"
-        android:text="To-do list is empty!"
-        android:textSize="15sp"
-        android:textStyle="italic"
-        android:visibility="invisible" />
 
     <ListView
         android:id="@+id/scores"
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="300dp"
         android:layout_marginBottom="10dp">
 
     </ListView>

@@ -10,16 +10,16 @@ import android.widget.ListView;
 import android.widget.Toast;
 import java.util.ArrayList;
 
-public class LogWGActivity extends AppCompatActivity implements LoggerHelper.Callback {
+public class DoneWGActivity extends AppCompatActivity implements LoggerHelper.Callback {
 
     ArrayList<Score> highscoresList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_wg);
+        setContentView(R.layout.activity_done_wg);
 
-        LoggerHelper helper = new LoggerHelper(this);
+        DoneHelper helper = new DoneHelper(this);
         helper.getScore(this);
 
         ListView lv = findViewById(R.id.scores);
@@ -30,7 +30,7 @@ public class LogWGActivity extends AppCompatActivity implements LoggerHelper.Cal
     public void gotScore(ArrayList<Score> highscoresList) {
         this.highscoresList = highscoresList;
         ListView highscores = findViewById(R.id.scores);
-        LoggerAdapter adapter = new LoggerAdapter(this, highscoresList);
+        DoneAdapter adapter = new DoneAdapter(this, highscoresList);
         highscores.setAdapter(adapter);
     }
 
@@ -44,28 +44,21 @@ public class LogWGActivity extends AppCompatActivity implements LoggerHelper.Cal
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Score item = (Score) parent.getItemAtPosition(position);
 
-            Intent intent = new Intent(LogWGActivity.this, LogDetailWGActivity.class);
+            Intent intent = new Intent(DoneWGActivity.this, DoneDetailWGActivity.class);
             intent.putExtra("selected_item", item);
             startActivity(intent);
         }
     }
 
+    public void onClickBACKTOMENU(View v) {
 
-    public void onClickNEWLOGITEM(View v) {
-
-        Intent intent = new Intent(LogWGActivity.this, LogNewItemWGActivity.class);
-        startActivity(intent);
-    }
-
-    public void onClickTODONELIST(View v) {
-
-        Intent intent = new Intent(LogWGActivity.this, LogNewItemWGActivity.class);
+        Intent intent = new Intent(DoneWGActivity.this, MenuWGActivity.class);
         startActivity(intent);
     }
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(LogWGActivity.this, MenuWGActivity.class);
+        Intent intent = new Intent(DoneWGActivity.this, MenuWGActivity.class);
         startActivity(intent);
     }
 }

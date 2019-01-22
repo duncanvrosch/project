@@ -30,7 +30,9 @@
         <activity android:name=".LogNewItemWNActivity" />
         <activity android:name=".LogDetailWNActivity" />
         <activity android:name=".ToDoListWNActivity" />
-        <activity android:name=".ToDoListDetailWNActivity"></activity>
+        <activity android:name=".ToDoListDetailWNActivity" />
+        <activity android:name=".DoneWGActivity" />
+        <activity android:name=".DoneDetailWGActivity"></activity>
     </application>
 
 </manifest>

@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 public class ToDoNewItemWGActivity extends AppCompatActivity {
@@ -31,10 +33,23 @@ public class ToDoNewItemWGActivity extends AppCompatActivity {
 
         String timestamp = new SimpleDateFormat("dd-MM-yyyy_HH:mm").format(Calendar.getInstance().getTime());
 
-        ToDoPost post = new ToDoPost(ToDoNewItemWGActivity.this);
-        post.postLogger(ToDoNewItemWGActivity.this, title, name, description, priority, timestamp);
+        if("high".equals(priority) || "medium".equals(priority) || "low".equals(priority)){
+            ToDoPost post = new ToDoPost(ToDoNewItemWGActivity.this);
+            post.postLogger(ToDoNewItemWGActivity.this, title, name, description, priority, timestamp);
 
-        Intent intent = new Intent(ToDoNewItemWGActivity.this, ToDoListWGActivity.class);
-        startActivity(intent);
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            Intent intent = new Intent(ToDoNewItemWGActivity.this, ToDoListWGActivity.class);
+            startActivity(intent);
+        }
+
+        else{
+            Toast.makeText(getApplicationContext(), "Only use 'high' , 'medium' or 'low' as input for priority!", Toast.LENGTH_LONG).show();
+        }
     }
 }
+

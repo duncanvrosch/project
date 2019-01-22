@@ -96,6 +96,12 @@ public class MenuWGActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickTODONELIST(View v) {
+
+        Intent intent = new Intent(MenuWGActivity.this, DoneWGActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(MenuWGActivity.this, MenuWGActivity.class);

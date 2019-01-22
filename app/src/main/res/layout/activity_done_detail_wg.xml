@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ToDoListDetailWNActivity">
+    tools:context=".DoneDetailWGActivity">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -83,40 +83,17 @@
         android:textSize="20dp"
         android:textStyle="italic" />
 
-    <View
-        android:id="@+id/divider3"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="10dp"
-        android:layout_weight="0"
-        android:background="?android:attr/listDivider"
-        tools:background="@color/colorPrimary" />
-
-    <EditText
-        android:id="@+id/Name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:ems="10"
-        android:hint="Insert name to finish to-do item"
-        android:inputType="textPersonName" />
-
     <Button
         android:id="@+id/btnDone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickDONETODOITEM"
-        android:text="Mark to-do item as done" />
+        android:onClick="onClickDELETEITEMFROMDONELIST"
+        android:text="Delete item from list" />
 
     <Button
-        android:id="@+id/btnBackToDoList"
+        android:id="@+id/btnAddItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickBACKTOTODOLIST"
-        android:text="Back to to-do list" />
-
-
-
+        android:onClick="onClickBACKTODONELIST"
+        android:text="Back to done list" />
 </LinearLayout>

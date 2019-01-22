@@ -19,6 +19,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.concurrent.TimeUnit;
+
 public class LogDetailWNActivity extends AppCompatActivity {
 
     Score selectedItem;
@@ -110,6 +112,12 @@ public class LogDetailWNActivity extends AppCompatActivity {
         queue.add(jsonArrayRequest);
 
         Toast.makeText(getApplicationContext(), "Deleted selected log item!", Toast.LENGTH_LONG).show();
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         Intent intent = new Intent(LogDetailWNActivity.this, LogWNActivity.class);
         startActivity(intent);

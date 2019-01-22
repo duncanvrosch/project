@@ -60,11 +60,24 @@ public class LogInActivity extends AppCompatActivity {
 
             Info.setText("Remaining attempts: " + String.valueOf(counter));
 
-            Toast.makeText(getApplicationContext(), "Wrong username or password! Please try again.", Toast.LENGTH_LONG).show();
+            if(counter == 2){
+                Toast.makeText(getApplicationContext(), "Wrong username or password! Please try again.", Toast.LENGTH_LONG).show();
+            }
+
+            if(counter == 1){
+                Toast.makeText(getApplicationContext(), "Wrong username or password! Please try again.", Toast.LENGTH_LONG).show();
+            }
 
             if(counter == 0){
                 Login.setEnabled(false);
+                Toast.makeText(getApplicationContext(), "Reached maximum amount of attempts!", Toast.LENGTH_LONG).show();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(LogInActivity.this, LogInActivity.class);
+        startActivity(intent);
     }
 }
