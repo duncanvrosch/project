@@ -64,3 +64,8 @@ Ik was ziek, maar heb een begin gemaakt aan de delete functie. Deze werkt als ik
 ### Maandag 21-01-2019 ###
 Vandaag heb ik mijn delete functie afgemaakt en fuctioneel gemaakt. Hierdoor kunnen zowel de werkgever als de werknemer items uit de logger verwijderen. Daarbij kan de werkgever items uit de to-do list verwijderen. Dit betekent dat de basale en simpele functie van de app vandaag compleet gemaakt is. Morgen zal ik een lijst maken waardoor de werkgever kan zien welke taken zijn afgemaakt in de to-do list.
 
+
+### Dinsdag 22-01-2019 ###
+Vandaag heb ik de 'done-list' geïmplementeerd waardoor werknemers een bepaalde taak kunnen afvinken met hun naam. Vervolgens wordt de taak uit de to-do list verwijderd en wordt deze weergegeven in de 'done-list' die alleen te zien is door de werkgever. Vervolgens kan de werkgever de taak ook uit de done-list verwijderen.
+
+Door deze implementatie is de app nu klaar voor gebruik. Volgende stap is de uitbreiding van het weerbericht zodat deze zich aanpast aan de locatie waar de werknemer zich op dat moment bevindt.
