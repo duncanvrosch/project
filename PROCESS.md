@@ -69,3 +69,10 @@ Vandaag heb ik mijn delete functie afgemaakt en fuctioneel gemaakt. Hierdoor kun
 Vandaag heb ik de 'done-list' geïmplementeerd waardoor werknemers een bepaalde taak kunnen afvinken met hun naam. Vervolgens wordt de taak uit de to-do list verwijderd en wordt deze weergegeven in de 'done-list' die alleen te zien is door de werkgever. Vervolgens kan de werkgever de taak ook uit de done-list verwijderen.
 
 Door deze implementatie is de app nu klaar voor gebruik. Volgende stap is de uitbreiding van het weerbericht zodat deze zich aanpast aan de locatie waar de werknemer zich op dat moment bevindt.
+
+
+
+### Woensdag 23-01-2019 ###
+Vandaag heb ik nog een nieuwe lijst ontwikkeld waardoor het voor de werkgever mogelijk wordt om verschillende accounts aan te maken en deze in de accountlijst te stoppen. Momenteel kon er namelijk alleen ingelogd worden met de inloggegevens die hardcoded werden aangebracht in het codebestand. Door deze nieuwe aanmaakfunctie van accounts wordt het mogelijk om voor nieuwe werknemers een account aan te maken, maar ook oude te verwijderen. De volgende stap is het koppelen van het inlogscherm aan deze lijst zodat het werkelijk functioneert.
+
+Deze keuze voor dynamische inloggegevens is ook gemaakt met het oog op de toekomst: bij volgende produceerstappen in de app kan het makkelijker zijn om persoonlijke accounts te maken met unieke content.
