@@ -32,7 +32,10 @@
         <activity android:name=".ToDoListWNActivity" />
         <activity android:name=".ToDoListDetailWNActivity" />
         <activity android:name=".DoneWGActivity" />
-        <activity android:name=".DoneDetailWGActivity"></activity>
+        <activity android:name=".DoneDetailWGActivity" />
+        <activity android:name=".NewAccountWGActivity" />
+        <activity android:name=".AccountListWGActivity" />
+        <activity android:name=".AccountDetailWGActivity"></activity>
     </application>
 
 </manifest>

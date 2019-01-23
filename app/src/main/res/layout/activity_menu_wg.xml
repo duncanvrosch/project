@@ -11,9 +11,9 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
         android:layout_weight="1"
         android:visibility="visible"
@@ -35,7 +35,7 @@
     <Button
         android:id="@+id/btnLog"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
         android:background="#e50e0e"
@@ -46,7 +46,7 @@
     <Button
         android:id="@+id/btnToDoList"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
         android:background="#e50e0e"
@@ -57,11 +57,23 @@
     <Button
         android:id="@+id/btnDoneList"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
         android:background="#e50e0e"
         android:onClick="onClickTODONELIST"
         android:text="Done List"
+        android:textColor="@color/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/btnMAKENEWACCOUNT"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0"
+        android:background="#e50e0e"
+        android:onClick="onClickMAKENEWACCOUNT"
+        android:text="Account overview"
         android:textColor="@color/ic_launcher_background" />
 
     <View
@@ -120,11 +132,13 @@
         android:id="@+id/textViewDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:layout_weight="0"
         android:gravity="center"
         android:paddingLeft="15dp"
         android:paddingTop="10dp"
         android:paddingRight="15dp"
+        android:paddingBottom="0dp"
         android:text="Description"
         android:textSize="17sp"
         android:textStyle="italic" />
@@ -132,10 +146,9 @@
     <Button
         android:id="@+id/btnLogOut"
         android:layout_width="300dp"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:gravity="center_vertical|center_horizontal"
         android:onClick="onClickLOGOUT"
         android:text="Log Out" />

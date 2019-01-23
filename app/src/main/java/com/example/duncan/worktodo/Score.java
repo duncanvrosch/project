@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 
 public class Score implements Serializable {
 
-    String title, name, description, priority, timestamp, movieId;
+    String title, name, description, priority, timestamp;
 
     public Score(String title, String name, String description, String priority, String timestamp) {
         this.title = title;
@@ -29,7 +29,5 @@ public class Score implements Serializable {
 
     public String getPriority() { return priority; }
 
-    public String getTimestamp() {
-        return timestamp;
-    }
+    public String getTimestamp() { return timestamp; }
 }

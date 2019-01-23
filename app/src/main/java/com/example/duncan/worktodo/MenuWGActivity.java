@@ -102,6 +102,12 @@ public class MenuWGActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickMAKENEWACCOUNT(View v) {
+
+        Intent intent = new Intent(MenuWGActivity.this, AccountListWGActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(MenuWGActivity.this, MenuWGActivity.class);
