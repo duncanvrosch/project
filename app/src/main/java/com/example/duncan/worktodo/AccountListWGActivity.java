@@ -56,6 +56,12 @@ public class AccountListWGActivity extends AppCompatActivity implements AccountL
         startActivity(intent);
     }
 
+    public void onClickBACKTOMENU(View v) {
+
+        Intent intent = new Intent(AccountListWGActivity.this, MenuWGActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(AccountListWGActivity.this, MenuWGActivity.class);

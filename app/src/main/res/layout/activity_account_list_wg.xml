@@ -32,7 +32,7 @@
     <ListView
         android:id="@+id/scores"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="280dp"
         android:layout_marginBottom="10dp">
 
     </ListView>
@@ -45,5 +45,14 @@
         android:layout_weight="1"
         android:onClick="onClickMAKENEWACCOUNT"
         android:text="MAKE NEW ACCOUNT" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1"
+        android:onClick="onClickBACKTOMENU"
+        android:text="Back to menu" />
 
 </LinearLayout>

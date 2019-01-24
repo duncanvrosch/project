@@ -56,6 +56,12 @@ public class ToDoListWGActivity extends AppCompatActivity implements LoggerHelpe
         startActivity(intent);
     }
 
+    public void onClickBACKTOMENU(View v) {
+
+        Intent intent = new Intent(ToDoListWGActivity.this, MenuWGActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(ToDoListWGActivity.this, MenuWGActivity.class);

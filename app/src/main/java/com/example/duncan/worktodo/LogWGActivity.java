@@ -63,6 +63,12 @@ public class LogWGActivity extends AppCompatActivity implements LoggerHelper.Cal
         startActivity(intent);
     }
 
+    public void onClickBACKTOMENU(View v) {
+
+        Intent intent = new Intent(LogWGActivity.this, MenuWGActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(LogWGActivity.this, MenuWGActivity.class);

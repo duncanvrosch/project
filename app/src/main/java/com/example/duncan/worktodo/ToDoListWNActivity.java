@@ -33,11 +33,6 @@ public class ToDoListWNActivity extends AppCompatActivity implements LoggerHelpe
         ListView highscores = findViewById(R.id.scores);
         ToDoAdapter adapter = new ToDoAdapter(this, highscoresList);
         highscores.setAdapter(adapter);
-
-        if (adapter.getCount() == 0) {
-            TextView empty = findViewById(R.id.Empty);
-            empty.setVisibility(View.VISIBLE);
-        }
     }
 
     @Override

@@ -48,7 +48,7 @@ public class MenuWGActivity extends AppCompatActivity {
                     JSONObject main_object = response.getJSONObject("main");
                     JSONArray array = response.getJSONArray("weather");
                     JSONObject object = array.getJSONObject(0);
-                    String temp = String.valueOf(main_object.getDouble("temp"));
+                    String temp = String.valueOf(Math.round(main_object.getDouble("temp")));
                     String description = object.getString("description");
                     String city = response.getString("name");
 

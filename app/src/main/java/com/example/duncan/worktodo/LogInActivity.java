@@ -9,6 +9,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class LogInActivity extends AppCompatActivity {
 
     private EditText Name;
@@ -21,58 +32,64 @@ public class LogInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        Name = (EditText)findViewById(R.id.etName);
-        Password = (EditText)findViewById(R.id.etPassword);
-        Info = (TextView)findViewById(R.id.tvInfo);
-        Login = (Button)findViewById(R.id.btnLogin);
-
-        Login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                validate(Name.getText().toString(), Password.getText().toString());
-            }
-        });
-
     }
 
-    private void validate(String userName, String userPassword){
-        if((userName.equals("Werkgever")) && (userPassword.equals("Werkgever"))){
+    public void onClickLOGIN(View v) {
+
+        EditText name = findViewById(R.id.etName);
+        EditText insertedpassword = findViewById(R.id.etPassword);
+
+        final String username = name.getText().toString();
+        final String password = insertedpassword.getText().toString();
+
+        if ((username.equals("werkgever")) && (password.equals("werkgever"))) {
             Intent intent = new Intent(LogInActivity.this, MenuWGActivity.class);
             startActivity(intent);
             return;
+
+        } else {
+
+            RequestQueue queue = Volley.newRequestQueue(this);
+
+            String url = String.format("https://ide50-duncanvrosch.legacy.cs50.io:8080/accountlist?username=%s", username);
+
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+
+                @Override
+                public void onResponse(JSONArray response) {
+
+                    if (response.length() == 0) {
+                        Toast.makeText(getApplicationContext(), "Wrong username!", Toast.LENGTH_SHORT).show();
+
+                    } else {
+                        try {
+
+                            JSONObject account = response.getJSONObject(0);
+                            String accountPassword = account.getString("password");
+
+                            if (accountPassword.equals(password)) {
+
+                                Intent intent = new Intent(LogInActivity.this, MenuWNActivity.class);
+                                intent.putExtra("username", username);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Wrong password, try again", Toast.LENGTH_SHORT).show();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            });
+            queue.add(jsonArrayRequest);
         }
 
-        else if((userName.equals("Werknemer")) && (userPassword.equals("Werknemer"))) {
-            Intent intent = new Intent(LogInActivity.this, MenuWNActivity.class);
-            startActivity(intent);
-            return;
-        }
-
-        else if((userName.equals("WG")) && (userPassword.equals("WG"))){
-            Intent intent = new Intent(LogInActivity.this, MenuWGActivity.class);
-            startActivity(intent);
-            return;
-        }
-
-        else{
-            counter--;
-
-            Info.setText("Remaining attempts: " + String.valueOf(counter));
-
-            if(counter == 2){
-                Toast.makeText(getApplicationContext(), "Wrong username or password! Please try again.", Toast.LENGTH_LONG).show();
-            }
-
-            if(counter == 1){
-                Toast.makeText(getApplicationContext(), "Wrong username or password! Please try again.", Toast.LENGTH_LONG).show();
-            }
-
-            if(counter == 0){
-                Login.setEnabled(false);
-                Toast.makeText(getApplicationContext(), "Reached maximum amount of attempts!", Toast.LENGTH_LONG).show();
-            }
-        }
     }
 
     @Override
