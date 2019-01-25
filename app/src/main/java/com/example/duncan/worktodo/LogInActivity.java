@@ -22,12 +22,6 @@ import org.json.JSONObject;
 
 public class LogInActivity extends AppCompatActivity {
 
-    private EditText Name;
-    private EditText Password;
-    private TextView Info;
-    private Button Login;
-    private int counter = 3;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
