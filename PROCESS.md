@@ -76,3 +76,18 @@ Door deze implementatie is de app nu klaar voor gebruik. Volgende stap is de uit
 Vandaag heb ik nog een nieuwe lijst ontwikkeld waardoor het voor de werkgever mogelijk wordt om verschillende accounts aan te maken en deze in de accountlijst te stoppen. Momenteel kon er namelijk alleen ingelogd worden met de inloggegevens die hardcoded werden aangebracht in het codebestand. Door deze nieuwe aanmaakfunctie van accounts wordt het mogelijk om voor nieuwe werknemers een account aan te maken, maar ook oude te verwijderen. De volgende stap is het koppelen van het inlogscherm aan deze lijst zodat het werkelijk functioneert.
 
 Deze keuze voor dynamische inloggegevens is ook gemaakt met het oog op de toekomst: bij volgende produceerstappen in de app kan het makkelijker zijn om persoonlijke accounts te maken met unieke content.
+
+
+### Donderdag 24-01-2019 ###
+Vandaag heb ik de accountlijst gekoppeld aan het inlogscherm. Hierdoor is het mogelijk in te loggen met je eigen verkregen account, gemaakt door de werkgever. 
+
+
+### Vrijdag 25-01-2019 ###
+Vandaag heb ik mijn repository netjes gemaakt zodat alles wat met de app te maken heeft zich nu in een map 'WorkToDo' bevindt. Deze keuze is gemaakt zodat de repository er op het eerste oog geordend uitziet met een goed onderscheiden mappenlijst. Daarnaast heb ik op iedere activiteit een 'Back to...' button gemaakt zodat dat ook consistent netjes uitziet.
+
+
+### Maandag 28-01-2019 ###
+Vandaag heb ik een begin gemaakt met de uitbreiding van het weerbericht waardoor het niet alleen mogelijk is het actuele weerbeeld te zien, maar ook die van over drie uur. Helaas heb ik dit nog niet optimaal werkend waardoor ik hier morgen aan verder moet gaan. Hopelijk krijg ik dit laatste onderdeel werkend.
+
+### Dinsdag 29-01-2019 ###
+Vandaag...
