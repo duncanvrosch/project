@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.duncan.worktodo">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -35,7 +37,8 @@
         <activity android:name=".DoneDetailWGActivity" />
         <activity android:name=".NewAccountWGActivity" />
         <activity android:name=".AccountListWGActivity" />
-        <activity android:name=".AccountDetailWGActivity"></activity>
+        <activity android:name=".AccountDetailWGActivity" />
+        <activity android:name=".ForecastWNActivity"></activity>
     </application>
 
 </manifest>

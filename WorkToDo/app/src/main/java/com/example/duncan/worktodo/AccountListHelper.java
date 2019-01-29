@@ -31,6 +31,7 @@ public class AccountListHelper implements Response.Listener<JSONArray>, Response
     public void onResponse(JSONArray response) {
         accountList = new ArrayList<>();
 
+        // all accounts from database for list
         try {
             for (int i =  0; i < response.length(); i++) {
                 JSONObject object = response.getJSONObject(i);
@@ -43,7 +44,7 @@ public class AccountListHelper implements Response.Listener<JSONArray>, Response
         }
         catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "errorwithJSON", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Error!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -52,6 +53,7 @@ public class AccountListHelper implements Response.Listener<JSONArray>, Response
         activity.gotAccountError(error.getMessage());
     }
 
+    // get accounts for list
     public void getAccount(AccountListHelper.Callback activity) {
         this.activity = activity;
         RequestQueue queue = Volley.newRequestQueue(context);

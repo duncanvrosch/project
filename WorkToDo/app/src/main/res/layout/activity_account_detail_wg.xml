@@ -75,16 +75,16 @@
         android:textStyle="italic" />
 
     <Button
-        android:id="@+id/btnDone"
+        android:id="@+id/btnDeleteAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickDELETEACCOUNT"
+        android:onClick="onClickDeleteAccount"
         android:text="Delete account" />
 
     <Button
-        android:id="@+id/btnAddItem"
+        android:id="@+id/btnBackToAccountOverview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickBACKTOACCOUNTLIST"
+        android:onClick="onClickBackToAccountOverview"
         android:text="Back to account overview" />
 </LinearLayout>

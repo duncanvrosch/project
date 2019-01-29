@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 public class AccountAdapter extends ArrayAdapter<Account> {
 
+    // constructor
     public AccountAdapter(Context context, ArrayList<Account> accountList) {
         super(context, 0, accountList);
     }
@@ -29,8 +30,10 @@ public class AccountAdapter extends ArrayAdapter<Account> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.account_item, parent, false);
         }
 
+        // grab account
         Account account = getItem(position);
 
+        // set username
         TextView username = convertView.findViewById(R.id.usernameText);
         username.setText(account.getUsername());
 

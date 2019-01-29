@@ -1,19 +1,17 @@
 package com.example.duncan.worktodo;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 
 public class ToDoListWNActivity extends AppCompatActivity implements LoggerHelper.Callback {
 
-    ArrayList<Score> highscoresList;
+    ArrayList<Helper> highscoresList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +26,7 @@ public class ToDoListWNActivity extends AppCompatActivity implements LoggerHelpe
     }
 
     @Override
-    public void gotScore(ArrayList<Score> highscoresList) {
+    public void gotScore(ArrayList<Helper> highscoresList) {
         this.highscoresList = highscoresList;
         ListView highscores = findViewById(R.id.scores);
         ToDoAdapter adapter = new ToDoAdapter(this, highscoresList);
@@ -43,7 +41,7 @@ public class ToDoListWNActivity extends AppCompatActivity implements LoggerHelpe
     private class SelectItemClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Score item = (Score) parent.getItemAtPosition(position);
+            Helper item = (Helper) parent.getItemAtPosition(position);
 
             Intent intent = new Intent(ToDoListWNActivity.this, ToDoListDetailWNActivity.class);
             intent.putExtra("selected_item", item);

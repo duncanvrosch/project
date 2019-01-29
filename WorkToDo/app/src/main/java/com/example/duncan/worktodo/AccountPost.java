@@ -13,10 +13,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AccountPost implements Response.Listener<String>, Response.ErrorListener{
-    String username;
-    String password;
+
+    String username, password;
     Context context;
     Callback callback_activity;
+
     public class PostRequest extends StringRequest {
 
         public PostRequest(int method, String url, Response.Listener<String> listener, Response.ErrorListener errorListener) {
@@ -33,14 +34,15 @@ public class AccountPost implements Response.Listener<String>, Response.ErrorLis
     }
 
     public interface Callback {
-        void gotpostLogger(String highscores);
-        void gotpostLoggerError(String message);
+        void gotpostAccount(String account);
+        void gotpostAccountError(String message);
     }
 
     public AccountPost(Context context) {
         this.context = context;
     }
 
+    // post new username and password in database
     public void postLogger(Context aContext, String logger_username, String logger_password){
         this.context = aContext;
         username = logger_username;
@@ -54,13 +56,13 @@ public class AccountPost implements Response.Listener<String>, Response.ErrorLis
 
     @Override
     public void onErrorResponse(VolleyError error) {
-        callback_activity.gotpostLoggerError(error.getMessage());
+        callback_activity.gotpostAccountError(error.getMessage());
     }
 
     @Override
     public void onResponse(String response) {
         try{
-            callback_activity.gotpostLogger(response);
+            callback_activity.gotpostAccount(response);
         }
         catch(Exception e){
             System.out.println(e.toString());

@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DoneDetailWGActivity extends AppCompatActivity {
 
-    Score selectedItem;
+    Helper selectedItem;
     int removalId;
 
     @Override
@@ -33,7 +33,7 @@ public class DoneDetailWGActivity extends AppCompatActivity {
 
         // grab item
         Intent intent = getIntent();
-        selectedItem = (Score) intent.getSerializableExtra("selected_item");
+        selectedItem = (Helper) intent.getSerializableExtra("selected_item");
 
         // grab info
         String title = selectedItem.getTitle();
@@ -48,6 +48,8 @@ public class DoneDetailWGActivity extends AppCompatActivity {
         TextView itemName = findViewById(R.id.entryName);
         TextView itemTimestamp = findViewById(R.id.entryDate);
         TextView itemPriority = findViewById(R.id.entryPriority);
+
+        // set info
         itemTitle.setText(title);
         itemDescription.setText(description);
         itemName.setText(name);
@@ -55,7 +57,7 @@ public class DoneDetailWGActivity extends AppCompatActivity {
         itemPriority.setText(priority);
     }
 
-    public void onClickDELETEITEMFROMDONELIST(View v) {
+    public void onClickDeleteItemFromDoneList(View v) {
 
         String url = "https://ide50-duncanvrosch.legacy.cs50.io:8080/donelist";
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -66,13 +68,14 @@ public class DoneDetailWGActivity extends AppCompatActivity {
 
                 String title = selectedItem.getTitle();
 
+                // search for to-do item with title of that item
                 for (int i = 0; i < response.length(); i++) {
 
                     try {
                         JSONObject item = response.getJSONObject(i);
-                        String checkId = item.getString("title");
+                        String checkTitle = item.getString("title");
 
-                        if (title.equals(checkId)) {
+                        if (title.equals(checkTitle)) {
                             removalId = item.getInt("id");
                             break;
                         }
@@ -83,6 +86,7 @@ public class DoneDetailWGActivity extends AppCompatActivity {
                     }
                 }
 
+                // delete done to-do item
                 RequestQueue deleteQueue = Volley.newRequestQueue(getApplicationContext());
 
                 String deleteUrl = String.format("https://ide50-duncanvrosch.legacy.cs50.io:8080/donelist/%d", removalId);
@@ -111,8 +115,10 @@ public class DoneDetailWGActivity extends AppCompatActivity {
         });
         queue.add(jsonArrayRequest);
 
+        // shown when successfully deleted account
         Toast.makeText(getApplicationContext(), "Deleted selected to-do item!", Toast.LENGTH_LONG).show();
 
+        // delay of 1 second
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
@@ -123,7 +129,8 @@ public class DoneDetailWGActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickBACKTODONELIST(View v) {
+    // back to done-list when button is clicked
+    public void onClickBackToDoneList(View v) {
 
         Intent intent = new Intent(DoneDetailWGActivity.this, DoneWGActivity.class);
         startActivity(intent);

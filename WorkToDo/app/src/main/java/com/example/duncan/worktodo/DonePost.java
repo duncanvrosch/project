@@ -13,13 +13,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DonePost implements Response.Listener<String>, Response.ErrorListener{
-    String title;
-    String name;
-    String description;
-    String priority;
-    String timestamp;
+
+    String title, name, description, priority, timestamp;
     Context context;
     Callback callback_activity;
+
     public class PostRequest extends StringRequest {
 
         public PostRequest(int method, String url, Response.Listener<String> listener, Response.ErrorListener errorListener) {
@@ -39,10 +37,11 @@ public class DonePost implements Response.Listener<String>, Response.ErrorListen
     }
 
     public interface Callback {
-        void gotpostLogger(String highscores);
-        void gotpostLoggerError(String message);
+        void gotpostDone(String highscores);
+        void gotpostDoneError(String message);
     }
 
+    // post new done-item
     public DonePost(Context context) {
         this.context = context;
     }
@@ -63,13 +62,13 @@ public class DonePost implements Response.Listener<String>, Response.ErrorListen
 
     @Override
     public void onErrorResponse(VolleyError error) {
-        callback_activity.gotpostLoggerError(error.getMessage());
+        callback_activity.gotpostDoneError(error.getMessage());
     }
 
     @Override
     public void onResponse(String response) {
         try{
-            callback_activity.gotpostLogger(response);
+            callback_activity.gotpostDone(response);
         }
         catch(Exception e){
             System.out.println(e.toString());

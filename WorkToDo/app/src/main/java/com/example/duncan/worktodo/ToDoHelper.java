@@ -15,11 +15,11 @@ import java.util.ArrayList;
 public class ToDoHelper implements Response.Listener<JSONArray>, Response.ErrorListener{
 
     private Context context;
-    private ArrayList<Score> highscoresList;
+    private ArrayList<Helper> highscoresList;
     private LoggerHelper.Callback activity;
 
     public interface Callback {
-        void gotScore(ArrayList<Score> highscoresList);
+        void gotScore(ArrayList<Helper> highscoresList);
         void gotScoreError(String message);
     }
 
@@ -39,7 +39,7 @@ public class ToDoHelper implements Response.Listener<JSONArray>, Response.ErrorL
                 String priority = object.getString("priority");
                 String timestamp = object.getString("timestamp");
                 String name = object.getString("name");
-                Score score = new Score(title, name, description, priority, timestamp);
+                Helper score = new Helper(title, name, description, priority, timestamp);
                 highscoresList.add(score);
             }
             activity.gotScore(highscoresList);

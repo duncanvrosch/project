@@ -38,21 +38,21 @@
     </ListView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnMakeNewAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_weight="1"
-        android:onClick="onClickMAKENEWACCOUNT"
+        android:onClick="onClickMakeNewAccount"
         android:text="MAKE NEW ACCOUNT" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnBackToMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_weight="1"
-        android:onClick="onClickBACKTOMENU"
+        android:onClick="onClickBackToMenu"
         android:text="Back to menu" />
 
 </LinearLayout>

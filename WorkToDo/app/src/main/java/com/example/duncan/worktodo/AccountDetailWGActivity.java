@@ -45,7 +45,8 @@ public class AccountDetailWGActivity extends AppCompatActivity {
         itemPassword.setText(password);
     }
 
-    public void onClickDELETEACCOUNT(View v) {
+    // delete account with click on delete button
+    public void onClickDeleteAccount(View v) {
 
         String url = "https://ide50-duncanvrosch.legacy.cs50.io:8080/accountlist";
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -56,23 +57,27 @@ public class AccountDetailWGActivity extends AppCompatActivity {
 
                 String username = selectedItem.getUsername();
 
+                // search for account with username in database
                 for (int i = 0; i < response.length(); i++) {
 
                     try {
                         JSONObject item = response.getJSONObject(i);
-                        String checkId = item.getString("username");
+                        String checkUsername = item.getString("username");
 
-                        if (username.equals(checkId)) {
+                        // grab id of account when found
+                        if (username.equals(checkUsername)) {
                             removalId = item.getInt("id");
                             break;
                         }
 
+                    // account not found
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        Toast.makeText(getApplicationContext(), "Doesn't work!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Account not found!", Toast.LENGTH_LONG).show();
                     }
                 }
 
+                // delete account
                 RequestQueue deleteQueue = Volley.newRequestQueue(getApplicationContext());
 
                 String deleteUrl = String.format("https://ide50-duncanvrosch.legacy.cs50.io:8080/accountlist/%d", removalId);
@@ -101,8 +106,10 @@ public class AccountDetailWGActivity extends AppCompatActivity {
         });
         queue.add(jsonArrayRequest);
 
+        // shown when successfully deleted account
         Toast.makeText(getApplicationContext(), "Deleted selected account successfully!", Toast.LENGTH_LONG).show();
 
+        // delay of 1 second
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
@@ -113,7 +120,7 @@ public class AccountDetailWGActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickBACKTOACCOUNTLIST(View v) {
+    public void onClickBackToAccountOverview(View v) {
 
         Intent intent = new Intent(AccountDetailWGActivity.this, AccountListWGActivity.class);
         startActivity(intent);

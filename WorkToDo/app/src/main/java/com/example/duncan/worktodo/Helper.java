@@ -3,11 +3,11 @@ package com.example.duncan.worktodo;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class Score implements Serializable {
+public class Helper implements Serializable {
 
     String title, name, description, priority, timestamp;
 
-    public Score(String title, String name, String description, String priority, String timestamp) {
+    public Helper(String title, String name, String description, String priority, String timestamp) {
         this.title = title;
         this.name = name;
         this.description = description;

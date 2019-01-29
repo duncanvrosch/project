@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ToDoListDetailWNActivity extends AppCompatActivity {
 
-    Score selectedItem;
+    Helper selectedItem;
     int removalId;
 
     @Override
@@ -36,7 +36,7 @@ public class ToDoListDetailWNActivity extends AppCompatActivity {
 
         // grab item
         Intent intent = getIntent();
-        selectedItem = (Score) intent.getSerializableExtra("selected_item");
+        selectedItem = (Helper) intent.getSerializableExtra("selected_item");
 
         // grab info
         String title = selectedItem.getTitle();

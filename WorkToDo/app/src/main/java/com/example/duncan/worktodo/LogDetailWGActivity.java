@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 public class LogDetailWGActivity extends AppCompatActivity {
 
-    Score selectedItem;
+    Helper selectedItem;
     int removalId;
 
     @Override
@@ -33,7 +33,7 @@ public class LogDetailWGActivity extends AppCompatActivity {
 
         // grab item
         Intent intent = getIntent();
-        selectedItem = (Score) intent.getSerializableExtra("selected_item");
+        selectedItem = (Helper) intent.getSerializableExtra("selected_item");
 
         // grab info
         String title = selectedItem.getTitle();

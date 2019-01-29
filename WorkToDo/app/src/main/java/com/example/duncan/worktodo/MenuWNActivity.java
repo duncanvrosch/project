@@ -98,8 +98,5 @@ public class MenuWNActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(MenuWNActivity.this, MenuWNActivity.class);
-        startActivity(intent);
     }
 }
-

@@ -26,6 +26,7 @@ public class AccountListWGActivity extends AppCompatActivity implements AccountL
         lv.setOnItemClickListener(new SelectItemClickListener());
     }
 
+    // make accounts visible in list
     @Override
     public void gotAccount(ArrayList<Account> accountList) {
         this.accountList = accountList;
@@ -36,9 +37,10 @@ public class AccountListWGActivity extends AppCompatActivity implements AccountL
 
     @Override
     public void gotAccountError(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Error with loading accounts!", Toast.LENGTH_LONG).show();
     }
 
+    // show detail activity when specific account is clicked
     private class SelectItemClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -50,13 +52,15 @@ public class AccountListWGActivity extends AppCompatActivity implements AccountL
         }
     }
 
-    public void onClickMAKENEWACCOUNT(View v) {
+    // make new account on click
+    public void onClickMakeNewAccount(View v) {
 
         Intent intent = new Intent(AccountListWGActivity.this, NewAccountWGActivity.class);
         startActivity(intent);
     }
 
-    public void onClickBACKTOMENU(View v) {
+    // back to menu when button is clicked
+    public void onClickBackToMenu(View v) {
 
         Intent intent = new Intent(AccountListWGActivity.this, MenuWGActivity.class);
         startActivity(intent);
