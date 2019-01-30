@@ -37,10 +37,13 @@ public class MenuWGActivity extends AppCompatActivity {
         find__weather();
     }
 
+    // get weather from API for Amsterdam
     public void find__weather() {
 
+        // url data of API
         String url = "https://api.openweathermap.org/data/2.5/weather?q=Amsterdam,NL&appid=f93b3bd64addf0f3c6d0e2338f153114&units=metric";
 
+        // get required info
         JsonObjectRequest jor = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -52,14 +55,14 @@ public class MenuWGActivity extends AppCompatActivity {
                     String description = object.getString("description");
                     String city = response.getString("name");
 
-                    t1_temp.setText(temp + "°C");
-                    t2_city.setText(city);
-                    t3_description.setText(description);
-
                     Calendar calendar = Calendar.getInstance();
                     SimpleDateFormat sdf = new SimpleDateFormat("EEEE dd - MM -" + " 2019");
                     String formatted_date = sdf.format(calendar.getTime());
 
+                    // set info
+                    t1_temp.setText(temp + "°C");
+                    t2_city.setText(city);
+                    t3_description.setText(description);
                     t4_date.setText(formatted_date);
 
                 } catch (JSONException e) {
@@ -78,31 +81,31 @@ public class MenuWGActivity extends AppCompatActivity {
         queue.add(jor);
     }
 
-    public void onClickLOG(View v) {
+    public void onClickLog(View v) {
 
         Intent intent = new Intent(MenuWGActivity.this, LogWGActivity.class);
         startActivity(intent);
     }
 
-    public void onClickTODOLIST(View v) {
+    public void onClickToDoList(View v) {
 
         Intent intent = new Intent(MenuWGActivity.this, ToDoListWGActivity.class);
         startActivity(intent);
     }
 
-    public void onClickLOGOUT(View v) {
+    public void onClickLogOut(View v) {
 
         Intent intent = new Intent(MenuWGActivity.this, LogInActivity.class);
         startActivity(intent);
     }
 
-    public void onClickTODONELIST(View v) {
+    public void onClickDoneList(View v) {
 
         Intent intent = new Intent(MenuWGActivity.this, DoneWGActivity.class);
         startActivity(intent);
     }
 
-    public void onClickMAKENEWACCOUNT(View v) {
+    public void onClickAccountOverview(View v) {
 
         Intent intent = new Intent(MenuWGActivity.this, AccountListWGActivity.class);
         startActivity(intent);
@@ -110,8 +113,6 @@ public class MenuWGActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(MenuWGActivity.this, MenuWGActivity.class);
-        startActivity(intent);
     }
 }
 
