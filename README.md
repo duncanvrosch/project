@@ -5,6 +5,8 @@ WorkToDo!
 
 ## Minor Programmeren, Universiteit van Amsterdam (2018 / 2019) ##
 
+<img src="/doc/Screenshot_20190130-115547.png" width="250"> <img src="/doc/Screenshot_20190130-115600.png" width="250"> <img src="/doc/Screenshot_20190130-115643.png" width="250"> <img src="/doc/Screenshot_20190130-115647.png" width="250">
+
 
 Deze app maakt online communicatie tussen werknemers en werkgevers mogelijk door middel van het uitwisselen van gebeurtenissen in een logboek. Daarnaast communiceert de werkgever taken over de app naar de werknemer zodat er overzichtelijk en geordend gewerkt kan worden. Overzichtelijk en taakgericht samen werken is de leidende factor in deze app.
 
