@@ -47,6 +47,7 @@ public class ToDoPost implements Response.Listener<String>, Response.ErrorListen
         this.context = context;
     }
 
+    // post new to-do item
     public void postLogger(Context aContext, String logger_title, String logger_name, String logger_description, String logger_priority, String logger_timestamp){
         this.context = aContext;
         title = logger_title;

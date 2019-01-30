@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 public class ToDoAdapter extends ArrayAdapter<Helper> {
 
+    // constructor
     public ToDoAdapter(Context context, ArrayList<Helper> highscoresList) {
         super(context, 0, highscoresList);
     }
@@ -26,8 +27,10 @@ public class ToDoAdapter extends ArrayAdapter<Helper> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
+        // grab item
         Helper score = getItem(position);
 
+        // set info
         ImageView redflag = convertView.findViewById(R.id.redflag);
         ImageView orangeflag = convertView.findViewById(R.id.orangeflag);
         ImageView greenflag = convertView.findViewById(R.id.greenflag);

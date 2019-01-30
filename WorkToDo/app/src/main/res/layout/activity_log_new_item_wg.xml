@@ -75,7 +75,7 @@
         android:id="@+id/btnAddItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickADDITEMTOLOGGER"
+        android:onClick="onClickAddItemToLogger"
         android:text="Add item to logger" />
 
 </LinearLayout>

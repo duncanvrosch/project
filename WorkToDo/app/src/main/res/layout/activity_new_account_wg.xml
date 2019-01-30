@@ -62,7 +62,7 @@
         android:id="@+id/btnNewAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickMAKENEWACCOUNT"
+        android:onClick="onClickMakeNewAccount"
         android:text="Make new account" />
 
 </LinearLayout>

@@ -55,7 +55,8 @@ public class LogDetailWGActivity extends AppCompatActivity {
         itemPriority.setText(priority);
     }
 
-    public void onClickDELETEITEMFROMLOGGER(View v) {
+    // delete log item with click on delete button
+    public void onClickDeleteItemFromLogger(View v) {
 
         String url = "https://ide50-duncanvrosch.legacy.cs50.io:8080/logger";
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -66,23 +67,27 @@ public class LogDetailWGActivity extends AppCompatActivity {
 
                 String title = selectedItem.getTitle();
 
+                // search for log item with title
                 for (int i = 0; i < response.length(); i++) {
 
                     try {
                         JSONObject item = response.getJSONObject(i);
-                        String checkId = item.getString("title");
+                        String checkTitle = item.getString("title");
 
-                        if (title.equals(checkId)) {
+                        // grab id of item when found
+                        if (title.equals(checkTitle)) {
                             removalId = item.getInt("id");
                             break;
                         }
 
+                    // item not found
                     } catch (JSONException e) {
                         e.printStackTrace();
                         Toast.makeText(getApplicationContext(), "Doesn't work!", Toast.LENGTH_LONG).show();
                     }
                 }
 
+                // delete account
                 RequestQueue deleteQueue = Volley.newRequestQueue(getApplicationContext());
 
                 String deleteUrl = String.format("https://ide50-duncanvrosch.legacy.cs50.io:8080/logger/%d", removalId);
@@ -111,8 +116,10 @@ public class LogDetailWGActivity extends AppCompatActivity {
         });
         queue.add(jsonArrayRequest);
 
+        // shown when successfully deleted item
         Toast.makeText(getApplicationContext(), "Deleted selected log item!", Toast.LENGTH_LONG).show();
 
+        // delay of 1 second
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {

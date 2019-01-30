@@ -13,13 +13,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoggerPost implements Response.Listener<String>, Response.ErrorListener{
-    String title;
-    String name;
-    String description;
-    String priority;
-    String timestamp;
+
+    String title, name, description, priority, timestamp;
     Context context;
     Callback callback_activity;
+
     public class PostRequest extends StringRequest {
 
         public PostRequest(int method, String url, Response.Listener<String> listener, Response.ErrorListener errorListener) {
@@ -47,6 +45,7 @@ public class LoggerPost implements Response.Listener<String>, Response.ErrorList
         this.context = context;
     }
 
+    // post new logger-item
     public void postLogger(Context aContext, String logger_title, String logger_name, String logger_description, String logger_priority, String logger_timestamp){
         this.context = aContext;
         title = logger_title;
@@ -60,9 +59,6 @@ public class LoggerPost implements Response.Listener<String>, Response.ErrorList
         PostRequest post = new PostRequest(Request.Method.POST, json_url,this,this);
         queue.add(post);
     }
-
-
-
 
     @Override
     public void onErrorResponse(VolleyError error) {

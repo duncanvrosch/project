@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class LoggerHelper implements Response.Listener<JSONArray>, Response.ErrorListener{
 
     private Context context;
-    private ArrayList<Helper> highscoresList;
+    private ArrayList<Helper> itemList;
     private LoggerHelper.Callback activity;
 
     public interface Callback {
@@ -29,8 +29,9 @@ public class LoggerHelper implements Response.Listener<JSONArray>, Response.Erro
 
     @Override
     public void onResponse(JSONArray response) {
-        highscoresList = new ArrayList<>();
+        itemList = new ArrayList<>();
 
+        // search all items
         try {
             for (int i =  0; i < response.length(); i++) {
                 JSONObject object = response.getJSONObject(i);
@@ -40,13 +41,13 @@ public class LoggerHelper implements Response.Listener<JSONArray>, Response.Erro
                 String timestamp = object.getString("timestamp");
                 String name = object.getString("name");
                 Helper score = new Helper(title, name, description, priority, timestamp);
-                highscoresList.add(score);
+                itemList.add(score);
             }
-            activity.gotScore(highscoresList);
+            activity.gotScore(itemList);
         }
         catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "errorwithJSON", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Error!", Toast.LENGTH_LONG).show();
         }
     }
 

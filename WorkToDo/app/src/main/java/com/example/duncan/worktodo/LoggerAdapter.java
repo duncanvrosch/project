@@ -14,8 +14,9 @@ import java.util.ArrayList;
 
 public class LoggerAdapter extends ArrayAdapter<Helper> {
 
-    public LoggerAdapter(Context context, ArrayList<Helper> highscoresList) {
-        super(context, 0, highscoresList);
+    // constructor
+    public LoggerAdapter(Context context, ArrayList<Helper> itemList) {
+        super(context, 0, itemList);
     }
 
     @NonNull
@@ -26,8 +27,10 @@ public class LoggerAdapter extends ArrayAdapter<Helper> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
+        // grab item
         Helper score = getItem(position);
 
+        // set info in imageviews and textviews
         ImageView redflag = convertView.findViewById(R.id.redflag);
         ImageView orangeflag = convertView.findViewById(R.id.orangeflag);
         ImageView greenflag = convertView.findViewById(R.id.greenflag);

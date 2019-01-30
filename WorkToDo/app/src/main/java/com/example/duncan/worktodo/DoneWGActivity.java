@@ -21,14 +21,15 @@ public class DoneWGActivity extends AppCompatActivity implements LoggerHelper.Ca
         LoggerHelper helper = new LoggerHelper(this);
         helper.getScore(this);
 
-        ListView lv = findViewById(R.id.scores);
+        ListView lv = findViewById(R.id.items);
         lv.setOnItemClickListener(new SelectItemClickListener());
     }
 
+    // make to do items visible in list
     @Override
     public void gotScore(ArrayList<Helper> itemList) {
         this.itemList = itemList;
-        ListView items = findViewById(R.id.scores);
+        ListView items = findViewById(R.id.items);
         DoneAdapter adapter = new DoneAdapter(this, itemList);
         items.setAdapter(adapter);
     }
@@ -38,6 +39,7 @@ public class DoneWGActivity extends AppCompatActivity implements LoggerHelper.Ca
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
+    // show detail activity when specific item is clicked
     private class SelectItemClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -49,12 +51,13 @@ public class DoneWGActivity extends AppCompatActivity implements LoggerHelper.Ca
         }
     }
 
-    public void onClickBACKTOMENU(View v) {
-
+    // back to menu when button is clicked
+    public void onClickBackToMenu(View v) {
         Intent intent = new Intent(DoneWGActivity.this, MenuWGActivity.class);
         startActivity(intent);
     }
 
+    // back to menu when backbutton is clicked
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(DoneWGActivity.this, MenuWGActivity.class);

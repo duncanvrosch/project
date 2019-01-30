@@ -31,9 +31,11 @@ public class AccountDetailWGActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_detail_wg);
 
+        // grab item
         Intent intent = getIntent();
         selectedItem = (Account) intent.getSerializableExtra("selected_item");
 
+        // grab info
         String username = selectedItem.getUsername();
         String password = selectedItem.getPassword();
 

@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_weight="1"
-        android:onClick="onClickNEWLOGITEM"
+        android:onClick="onClickNewLogItem"
         android:text="Add new item to logger" />
 
     <Button
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_weight="1"
-        android:onClick="onClickBACKTOMENU"
+        android:onClick="onClickBackToMenu"
         android:text="Back to menu" />
 
 </LinearLayout>

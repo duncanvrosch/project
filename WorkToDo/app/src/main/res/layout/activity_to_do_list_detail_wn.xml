@@ -107,14 +107,14 @@
         android:id="@+id/btnDone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickDONETODOITEM"
+        android:onClick="onClickDoneToDoItem"
         android:text="Mark to-do item as done" />
 
     <Button
         android:id="@+id/btnBackToDoList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickBACKTOTODOLIST"
+        android:onClick="onClickBackToToDoList"
         android:text="Back to to-do list" />
 
 

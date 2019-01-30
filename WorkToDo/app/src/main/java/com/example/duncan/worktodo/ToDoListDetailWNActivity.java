@@ -58,22 +58,26 @@ public class ToDoListDetailWNActivity extends AppCompatActivity {
         itemPriority.setText(priority);
     }
 
-    public void onClickBACKTOTODOLIST(View v) {
+    public void onClickBackToToDoList(View v) {
 
         Intent intent = new Intent(ToDoListDetailWNActivity.this, ToDoListWNActivity.class);
         startActivity(intent);
     }
 
-    public void onClickDONETODOITEM(View v) {
+    public void onClickDoneToDoItem(View v) {
 
+        // grab name
         EditText nameEdit = findViewById(R.id.Name);
         String name = nameEdit.getText().toString();
 
+        // line cannot be empty
         if(name.equals("")){
             Toast.makeText(getApplicationContext(), "Fill in a name please.", Toast.LENGTH_LONG).show();
         }
 
         else {
+
+            // get info
             TextView titleEdit = findViewById(R.id.entryTitle);
             String title = titleEdit.getText().toString();
             TextView descriptionEdit = findViewById(R.id.entryDescription);
@@ -81,8 +85,10 @@ public class ToDoListDetailWNActivity extends AppCompatActivity {
             TextView priorityEdit = findViewById(R.id.entryPriority);
             String priority = priorityEdit.getText().toString();
 
+            // make timestamp
             String timestamp = new SimpleDateFormat("dd-MM-yyyy_HH:mm").format(Calendar.getInstance().getTime());
 
+            // post done item
             DonePost post = new DonePost(ToDoListDetailWNActivity.this);
             post.doneLogger(ToDoListDetailWNActivity.this, title, name, description, priority, timestamp);
 
@@ -95,23 +101,27 @@ public class ToDoListDetailWNActivity extends AppCompatActivity {
 
                     String title = selectedItem.getTitle();
 
+                    // search for to-do item with title
                     for (int i = 0; i < response.length(); i++) {
 
                         try {
                             JSONObject item = response.getJSONObject(i);
-                            String checkId = item.getString("title");
+                            String checkTitle = item.getString("title");
 
-                            if (title.equals(checkId)) {
+                            // grab id of item when found
+                            if (title.equals(checkTitle)) {
                                 removalId = item.getInt("id");
                                 break;
                             }
 
+                        // item not found
                         } catch (JSONException e) {
                             e.printStackTrace();
                             Toast.makeText(getApplicationContext(), "Doesn't work!", Toast.LENGTH_LONG).show();
                         }
                     }
 
+                    // delete account
                     RequestQueue deleteQueue = Volley.newRequestQueue(getApplicationContext());
 
                     String deleteUrl = String.format("https://ide50-duncanvrosch.legacy.cs50.io:8080/todolist/%d", removalId);
@@ -140,8 +150,10 @@ public class ToDoListDetailWNActivity extends AppCompatActivity {
             });
             queue.add(jsonArrayRequest);
 
+            // shown when successfully deleted item
             Toast.makeText(getApplicationContext(), "Marked selected to-do item as done!", Toast.LENGTH_LONG).show();
 
+            // delay of 1 second
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {

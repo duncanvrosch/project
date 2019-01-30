@@ -20,8 +20,9 @@ public class NewAccountWGActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_account_wg);
     }
 
-    public void onClickMAKENEWACCOUNT(View v) {
+    public void onClickMakeNewAccount(View v) {
 
+        // grab info
         EditText usernameEdit = findViewById(R.id.etUsername);
         String username = usernameEdit.getText().toString();
         EditText passwordEdit = findViewById(R.id.etPassword);
@@ -29,24 +30,28 @@ public class NewAccountWGActivity extends AppCompatActivity {
         EditText confirmPasswordEdit = findViewById(R.id.etConfirmpassword);
         String confirmpassword = confirmPasswordEdit.getText().toString();
 
+        // if input in password and confirm password is the same, then post new account
         if(password.equals(confirmpassword) && !username.equals("")){
             AccountPost post = new AccountPost(NewAccountWGActivity.this);
             post.postLogger(NewAccountWGActivity.this, username, password);
 
+            // delay of 1 second
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
-            Intent intent = new Intent(NewAccountWGActivity.this, MenuWGActivity.class);
+            Intent intent = new Intent(NewAccountWGActivity.this, AccountListWGActivity.class);
             startActivity(intent);
         }
 
+        // inserted different passwords
         else if(!password.equals(confirmpassword)){
             Toast.makeText(getApplicationContext(), "You entered different passwords!", Toast.LENGTH_LONG).show();
         }
 
+        // line is empty
         else if(password.equals("") || username.equals("") || confirmpassword.equals("")){
             Toast.makeText(getApplicationContext(), "You left a line empty!", Toast.LENGTH_LONG).show();
         }

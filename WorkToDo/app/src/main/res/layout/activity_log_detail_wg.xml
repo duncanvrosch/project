@@ -84,10 +84,10 @@
         android:textStyle="italic" />
 
     <Button
-        android:id="@+id/btnAddItem"
+        android:id="@+id/btnDelete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickDELETEITEMFROMLOGGER"
+        android:onClick="onClickDeleteItemFromLogger"
         android:text="Delete item from logger" />
 
 </LinearLayout>

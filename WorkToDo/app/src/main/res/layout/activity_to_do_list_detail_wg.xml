@@ -87,13 +87,13 @@
         android:id="@+id/btnDone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickDONETODOITEM"
+        android:onClick="onClickDoneToDoItem"
         android:text="Finish to-do item" />
 
     <Button
         android:id="@+id/btnAddItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickBACKTOTODOLIST"
+        android:onClick="onClickBackToToDoList"
         android:text="Back to to-do list" />
 </LinearLayout>

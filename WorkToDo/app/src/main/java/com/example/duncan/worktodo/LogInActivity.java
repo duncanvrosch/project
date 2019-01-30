@@ -28,19 +28,22 @@ public class LogInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void onClickLOGIN(View v) {
+    public void onClickLogIn(View v) {
 
         EditText name = findViewById(R.id.etName);
         EditText insertedpassword = findViewById(R.id.etPassword);
 
+        // grab input
         final String username = name.getText().toString();
         final String password = insertedpassword.getText().toString();
 
+        // direct to employer homepage
         if ((username.equals("werkgever")) && (password.equals("werkgever"))) {
             Intent intent = new Intent(LogInActivity.this, MenuWGActivity.class);
             startActivity(intent);
             return;
 
+        // search if username and password are correct
         } else {
 
             RequestQueue queue = Volley.newRequestQueue(this);
@@ -52,9 +55,11 @@ public class LogInActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(JSONArray response) {
 
+                    // shown when username not found
                     if (response.length() == 0) {
                         Toast.makeText(getApplicationContext(), "Wrong username!", Toast.LENGTH_SHORT).show();
 
+                    // username found, checking correctness of password
                     } else {
                         try {
 

@@ -76,7 +76,7 @@
         android:id="@+id/btnAddItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickADDITEMTOTODOLIST"
+        android:onClick="onClickAddItemToToDoList"
         android:text="Add item to to-do list" />
 
 </LinearLayout>

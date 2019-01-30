@@ -55,7 +55,14 @@ public class ToDoListDetailWGActivity extends AppCompatActivity {
         itemPriority.setText(priority);
     }
 
-    public void onClickDONETODOITEM(View v) {
+    public void onClickBackToToDoList(View v) {
+
+        Intent intent = new Intent(ToDoListDetailWGActivity.this, ToDoListWGActivity.class);
+        startActivity(intent);
+    }
+
+    // delete to-do item with click on delete button
+    public void onClickDoneToDoItem(View v) {
 
         String url = "https://ide50-duncanvrosch.legacy.cs50.io:8080/todolist";
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -66,23 +73,27 @@ public class ToDoListDetailWGActivity extends AppCompatActivity {
 
                 String title = selectedItem.getTitle();
 
+                // search for to-do item with title
                 for (int i = 0; i < response.length(); i++) {
 
                     try {
                         JSONObject item = response.getJSONObject(i);
                         String checkId = item.getString("title");
 
+                        // grab id of item when found
                         if (title.equals(checkId)) {
                             removalId = item.getInt("id");
                             break;
                         }
 
+                    // item not found
                     } catch (JSONException e) {
                         e.printStackTrace();
                         Toast.makeText(getApplicationContext(), "Doesn't work!", Toast.LENGTH_LONG).show();
                     }
                 }
 
+                // delete account
                 RequestQueue deleteQueue = Volley.newRequestQueue(getApplicationContext());
 
                 String deleteUrl = String.format("https://ide50-duncanvrosch.legacy.cs50.io:8080/todolist/%d", removalId);
@@ -111,8 +122,10 @@ public class ToDoListDetailWGActivity extends AppCompatActivity {
         });
         queue.add(jsonArrayRequest);
 
+        // shown when successfully deleted item
         Toast.makeText(getApplicationContext(), "Deleted selected to-do item!", Toast.LENGTH_LONG).show();
 
+        // delay of 1 second
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {

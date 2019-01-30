@@ -25,6 +25,7 @@ public class LogWNActivity extends AppCompatActivity implements LoggerHelper.Cal
         lv.setOnItemClickListener(new SelectItemClickListener());
     }
 
+    // make log items visible in list
     @Override
     public void gotScore(ArrayList<Helper> highscoresList) {
         this.highscoresList = highscoresList;
@@ -38,6 +39,7 @@ public class LogWNActivity extends AppCompatActivity implements LoggerHelper.Cal
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
+    // show detail activity when specific item is clicked
     private class SelectItemClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -50,18 +52,21 @@ public class LogWNActivity extends AppCompatActivity implements LoggerHelper.Cal
     }
 
 
-    public void onClickNEWLOGITEM(View v) {
+    // new log item when button is clicked
+    public void onClickNewLogItem(View v) {
 
         Intent intent = new Intent(LogWNActivity.this, LogNewItemWNActivity.class);
         startActivity(intent);
     }
 
-    public void onClickBACKTOMENU(View v) {
+    // back to menu when button is clicked
+    public void onClickBackToMenu(View v) {
 
         Intent intent = new Intent(LogWNActivity.this, MenuWNActivity.class);
         startActivity(intent);
     }
 
+    // back to menu when backbutton is clicked
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(LogWNActivity.this, MenuWNActivity.class);

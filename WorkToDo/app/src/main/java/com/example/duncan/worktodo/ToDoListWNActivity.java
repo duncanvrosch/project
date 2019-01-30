@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class ToDoListWNActivity extends AppCompatActivity implements LoggerHelper.Callback {
 
-    ArrayList<Helper> highscoresList;
+    ArrayList<Helper> itemList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,16 +21,17 @@ public class ToDoListWNActivity extends AppCompatActivity implements LoggerHelpe
         ToDoHelper helper = new ToDoHelper(this);
         helper.getScore(this);
 
-        ListView lv = findViewById(R.id.scores);
+        ListView lv = findViewById(R.id.list);
         lv.setOnItemClickListener(new SelectItemClickListener());
     }
 
+    // make to-do items visible in list
     @Override
-    public void gotScore(ArrayList<Helper> highscoresList) {
-        this.highscoresList = highscoresList;
-        ListView highscores = findViewById(R.id.scores);
-        ToDoAdapter adapter = new ToDoAdapter(this, highscoresList);
-        highscores.setAdapter(adapter);
+    public void gotScore(ArrayList<Helper> itemList) {
+        this.itemList = itemList;
+        ListView items = findViewById(R.id.list);
+        ToDoAdapter adapter = new ToDoAdapter(this, itemList);
+        items.setAdapter(adapter);
     }
 
     @Override
@@ -38,6 +39,7 @@ public class ToDoListWNActivity extends AppCompatActivity implements LoggerHelpe
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
+    // show detail activity when specific item is clicked
     private class SelectItemClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -49,13 +51,14 @@ public class ToDoListWNActivity extends AppCompatActivity implements LoggerHelpe
         }
     }
 
-
-    public void onClickBACKTOMENU(View v) {
+    // back to menu when button is clicked
+    public void onClickBackToMenu(View v) {
 
         Intent intent = new Intent(ToDoListWNActivity.this, MenuWNActivity.class);
         startActivity(intent);
     }
 
+    // back to menu when backbutton is clicked
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(ToDoListWNActivity.this, MenuWNActivity.class);
