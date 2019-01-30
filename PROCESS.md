@@ -89,5 +89,10 @@ Vandaag heb ik mijn repository netjes gemaakt zodat alles wat met de app te make
 ### Maandag 28-01-2019 ###
 Vandaag heb ik een begin gemaakt met de uitbreiding van het weerbericht waardoor het niet alleen mogelijk is het actuele weerbeeld te zien, maar ook die van over drie uur. Helaas heb ik dit nog niet optimaal werkend waardoor ik hier morgen aan verder moet gaan. Hopelijk krijg ik dit laatste onderdeel werkend.
 
+
 ### Dinsdag 29-01-2019 ###
-Vandaag...
+Vandaag heb ik lang zitten worstelen met het weerbericht. Echter, het is me niet gelukt om de voorspelling voor de komende 3 uur te implementeren. Ook niet om de huidige locatie door te geven aan de weer API. Helaas heb ik deze uitbreiding moeten schrappen aangezien ik nog moest beginnen met het opschonen van de code en het becommentariëren ervan.
+
+
+### Woensdag 30-01-2019 ###
+Vandaag heb ik alle code afgemaakt en ingeleverd waardoor mijn app nu als voltooid gezien kan worden.
