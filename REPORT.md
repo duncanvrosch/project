@@ -94,3 +94,7 @@ Om items blijvend te kunnen opslaan in een database, wordt gebruik gemaakt van d
 | timestamp | string |
 
 </td></tr> </table>
+
+
+### Postrequests ###
+Het project bevat, net als vier lijsten, dus ook  vier verschillende PostRequests die worden gebruikt om specifieke informatie aan de online database toe te voegen. Kortom, AccountPost.java wordt gebruikt om een nieuw account toe te voegen aan de AccountList. DonePost.java wordt gebruikt om een to-do item toe te voegen aan de DoneList. ToDoPost.java wordt gebruikt om een to-do item toe te voegen aan de ToDoList. En LoggerPost.java wordt gebruikt om een log item toe te voegen aan de Logger. 
