@@ -26,7 +26,7 @@ De class Helper wordt gebruikt om de informatie van een to-do item, done item, o
 | priority | string |
 | timestamp | string |
 
-</td><td>
+</td>
 
 
 
