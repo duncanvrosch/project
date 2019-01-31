@@ -28,5 +28,17 @@ De class Helper wordt gebruikt om de informatie van een to-do item, done item, o
 
 </td>
 
+Hiernaast bestaat er een class Account. Deze wordt gebruikt om de informatie van een account op te slaan. Dit betreft de 'username' en 'password' van een gebruiker. Op deze manier wordt het mogelijk om deze informatie ook weer weer te geven in accountlijst die beschikbaar is voor de werkgever. In onderstaande tabel kan ook worden bekeken welke zaken er worden opgeslagen in de Account class.
+
+<table>
+<tr><th>Account</th>
+<tr><td>
+
+|attribute| type |
+|--|--|
+| username | string |
+| password | string | 
+
+</td>
 
 
