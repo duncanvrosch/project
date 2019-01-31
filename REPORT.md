@@ -73,7 +73,7 @@ Om items blijvend te kunnen opslaan in een database, wordt gebruik gemaakt van d
 </td></tr> </table>
 
 <table>
-<tr><th> AccountList </th><th> userwatchlist </th></tr>
+<tr><th> AccountList </th><th> DoneList </th></tr>
 <tr><td>
 
 |key| value |
