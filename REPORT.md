@@ -5,19 +5,28 @@ WorkToDo!
 
 ## Final Report: Minor Programmeren, Universiteit van Amsterdam (2018 / 2019) ##
 
-<img src="/doc/Screenshot_20190130-115547.png" width="170"> <img src="/doc/Screenshot_20190130-115600.png" width="170"> <img src="/doc/Screenshot_20190130-115643.png" width="170"> <img src="/doc/Screenshot_20190130-115647.png" width="170">
+<img src="/doc/Screenshot_20190130-115600.png" width="170"> 
 
+Deze app maakt online communicatie tussen werknemers en werkgevers mogelijk door middel van het uitwisselen van gebeurtenissen in een logboek en een to-do list.
 
-Deze app maakt online communicatie tussen werknemers en werkgevers mogelijk door middel van het uitwisselen van gebeurtenissen in een logboek. Daarnaast communiceert de werkgever taken over de app naar de werknemer zodat er overzichtelijk en geordend gewerkt kan worden. Overzichtelijk en taakgericht samen werken is de leidende factor in deze app.
+### Overview activities ###
 
-### Sources ###
-- OpenWeatherMap API: https://api.openweathermap.org/data/2.5/weather?q=Amsterdam,NL&appid=f93b3bd64addf0f3c6d0e2338f153114&units=metric
-- Rester Server: https://github.com/stgm/rester
-- How to make a delete request: https://www.itsalif.info/content/android-volley-tutorial-http-get-post-put
-- How to make a timestamp: https://stackoverflow.com/questions/5175728/how-to-get-the-current-date-time-in-java
-- How to implement a weather API: https://github.com/haroon47/WeatherApp/tree/master/app/src/main
+### Classes ###
+De class Helper wordt gebruikt om de informatie van een to-do item, done item, of log item op te slaan. Op deze manier wordt het mogelijk om deze informatie ook weer weer te geven in de lijst van bijvoorbeeld het logboek. Daarnaast wordt deze class aangeroepen om ook informatie te kunnen plaatsen in de DetailActivity's. Kortom, voor iedere activiteit worden de relevante attributes gepakt en getoond door middel van de Helper class en de bijbehorende adapter. In onderstaande tabel kan worden bekeken welke zaken er worden opgeslagen in de Helper class.
 
-### License ###
-Copyright © 2019, Duncan Vrösch. Uitgebracht onder de GNU General Public License v3.0.
+<table>
+<tr><th>Helper</th>
+<tr><td>
+
+|attribute| type |
+|--|--|
+| title | string |
+| name | string | 
+| description | string |
+| priority | string |
+| timestamp | string |
+
+</td><td>
+
 
 
