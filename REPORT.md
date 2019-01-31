@@ -98,3 +98,14 @@ Om items blijvend te kunnen opslaan in een database, wordt gebruik gemaakt van d
 
 ### Postrequests ###
 Het project bevat, net als vier lijsten, dus ook  vier verschillende PostRequests die worden gebruikt om specifieke informatie aan de online database toe te voegen. Kortom, AccountPost.java wordt gebruikt om een nieuw account toe te voegen aan de AccountList. DonePost.java wordt gebruikt om een to-do item toe te voegen aan de DoneList. ToDoPost.java wordt gebruikt om een to-do item toe te voegen aan de ToDoList. En LoggerPost.java wordt gebruikt om een log item toe te voegen aan de Logger. 
+
+### Changes and challenges ###
+Het gehele idee dat aan het begin van het project is bedacht, is achteraf ook mogelijk gebleken. Toch zijn er enkele zaken die anders en aangepast zijn geworden. Hiernaast zijn er verschillende features toegevoegd.
+
+In mijn originele proposal heb ik het bijvoorbeeld niet gehad over de done list. Deze lijst is later ontwikkeld waardoor de werkegever op een rijtje kan zien welk to-do taken zijn afgerond. Dit plan was er oorspronkelijk nog niet. Het is een functie geweest die essentieel is gebleken na de eerste week om een manier te hebben om to-do items af te vinken. 
+
+Hiernaast bestaat er nu ook een mogelijkheid voor de werkgever om accounts aan te maken voor werknemers. Deze functie heb ik ook niet eerst benoemd en niet ontwikkeld aangezien ik werkte met hardcoded accounts. Helaas is dit erg statisch, waardoor ik gedurende het proces heb gekozen voor een dynamische accountlijst die communiceert via een database. Hierdoor worden werknemers die ontslag nemen uitgesloten van deelname aan de app, en kan er voor nieuwe werknemers een persoonlijk account aangemaakt worden. Helaas heeft ieder persoonlijk account geen verschil ten opzichte van elkaar. Dit zou wel interessant zijn voor uitbreiding aangezien er dan ook persoonlijke to-do listen kunnen worden gemaakt per werknemer. Echter, dit is nu niet aan de orde.
+
+Het design van de app is onveranderd gebleven en komt grotendeels overeen met het eerdere ontwerp in de Proposal. Daarnaast zijn er zoals beschreven twee aparte platforms gemaakt voor aan de ene kant de werknemer en aan de andere kant de werkgever. Om deze te scheiden heb ik gebruik gemaakt van elk een aparte activiteit.
+
+Een probleem tijdens het maken van de app vormde zich rond de API. Deze werkte vrij snel om het recente weer vanuit Amsterdam te kunnen visualiseren in het menu van de app voor zowel werknemer als werkgever. Helaas is het me de laatste dagen noch gelukt om een weerbericht voor over 3 uur  noch een weerbericht voor de huidige locatie te implementeren. Hierdoor is het weerbericht van nu wel werkend, maar erg minimaal naar mijn mening. 
