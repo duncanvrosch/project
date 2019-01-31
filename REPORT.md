@@ -46,7 +46,7 @@ Het project heeft vier adapters: DoneAdapter, ToDoAdapter, LoggerAdapter en Acco
 ### Database ###
 Om items blijvend te kunnen opslaan in een database, wordt gebruik gemaakt van de Rester Database: https://github.com/stgm/rester. In de database worden verschillende zaken opgeslagen en bestaan er vier entry's: de to-do list, een logboek, een done-list en een accountlist. Hieronder staat alles keurig en overzichtelijk op een rijtje van wat de entry's bevatten.
 
-table>
+<table>
 <tr><th> To-Do List </th><th> Logger </th></tr>
 <tr><td>
 
